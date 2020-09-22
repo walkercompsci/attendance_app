@@ -1,6 +1,6 @@
 # attendance_app
 
-A new Flutter project.
+Attendance App Ron, Riley, and Kolya
 
 ## Getting Started
 

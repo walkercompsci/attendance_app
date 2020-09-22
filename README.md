@@ -1,6 +1,6 @@
 # attendance_app
 
-Attendance App Ron, Riley, and Kolya Taylor
+Attendance App Ron parsons, Riley, and Rolya Taylor
 
 ## Getting Started
 

@@ -1,5 +1,16 @@
 import 'package:flutter/material.dart';
 
-class Login extends StatefulWidget{
-  
+class Login extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SafeArea(
+        child: Column(
+          children: <Widget>[
+            FlatButton.icon()
+          ],
+        ),
+      ),
+    );
+  }
 }

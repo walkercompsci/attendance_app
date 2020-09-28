@@ -4,13 +4,11 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Column(
-          children: <Widget>[
-            FlatButton.icon()
-          ],
-        ),
-      ),
+     appBar: AppBar(
+       title: Text('Attendance Club App'),
+       centerTitle: true,
+       backgroundColor: Colors.black,
+     ),
     );
   }
 }

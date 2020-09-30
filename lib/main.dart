@@ -2,12 +2,11 @@ import 'package:flutter/material.dart';
 import 'login.dart';
 
 void main() => runApp(MaterialApp(
-  home: Login(),
+  home: MyApp(),
   routes: {
     '/login' : (context)=> Login(),
   },
 ));
-
 
 
 class MyApp extends StatelessWidget {
@@ -29,6 +28,7 @@ child: GetDate()
 class GetDate extends StatefulWidget {
 
 _GetDateState createState() => _GetDateState();
+
 
 }
 
@@ -73,9 +73,10 @@ textColor: Colors.white,
 padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
 child: Text('Click Here To Get Current Date in Flutter'),
 ),
-
 ],
 ),
-));
+)
+
+);
 }
 }

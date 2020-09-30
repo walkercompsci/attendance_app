@@ -1,8 +1,14 @@
-
-
 import 'package:flutter/material.dart';
+import 'login.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(MaterialApp(
+  home: Login(),
+  routes: {
+    '/login' : (context)=> Login(),
+  },
+));
+
+
 
 class MyApp extends StatelessWidget {
 @override

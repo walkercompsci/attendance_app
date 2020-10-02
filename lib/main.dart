@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'login.dart';
 
 void main() => runApp(MaterialApp(
-  home: MyApp(),
+  home: Login(),
   routes: {
+    '/main' : (context)=> MyApp(),
     '/login' : (context)=> Login(),
   },
 ));

@@ -38,21 +38,19 @@ class _BackState extends State<Back> {
       body: SafeArea(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
-
         children: <Widget>[
           Padding(
       padding: EdgeInsets.all(8.0),
           ),
           FlatButton.icon(
-
             onPressed:(){
               Navigator.pushNamed(context,'/login');
             },
             color: Colors.red,
+            padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
             icon: Icon(Icons.edit_location),
             label: Text('edit location'),
           ),
-
         ],
       ),
     ),);

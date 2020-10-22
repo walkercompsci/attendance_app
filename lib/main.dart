@@ -28,7 +28,28 @@ class Back extends StatefulWidget {
 class _BackState extends State<Back> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: SafeArea(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+
+        children: <Widget>[
+          Padding(
+      padding: EdgeInsets.all(8.0),
+          ),
+          FlatButton.icon(
+
+            onPressed:(){
+              Navigator.pushNamed(context,'/login');
+            },
+            color: Colors.red,
+            icon: Icon(Icons.edit_location),
+            label: Text('edit location'),
+          ),
+
+        ],
+      ),
+    ),);
   }
 }
 
@@ -78,7 +99,7 @@ class _GetDateState extends State<GetDate> {
               ),
 
               RaisedButton(
-                onpressed:getCurrentDate,
+                onPressed:getCurrentDate,
                 color: Colors.black,
                 textColor: Colors.white,
                 padding: EdgeInsets.fromLTRB(10, 10, 10, 10),

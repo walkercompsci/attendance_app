@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:attendance_app/pages/login.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(MaterialApp(
+  home: Login(),
+  routes:{
+   '/login': (context) => Login(),
+    '/main': (context) => MyApp(),
+  },
+
+));
 
 class MyApp extends StatelessWidget {
   @override
@@ -9,8 +17,6 @@ class MyApp extends StatelessWidget {
         home: Scaffold(
             appBar: AppBar(
                 backgroundColor:Colors.black,
-
-
                 title: Text('Sign In To The CAA')
             ),
             body: Center(

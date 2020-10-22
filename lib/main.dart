@@ -1,29 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:attendance_app/pages/login.dart';
 
-void main() => runApp(MaterialApp(
-  home: Login(),
-  routes: {
-    '/main' : (context)=> MyApp(),
-    '/login' : (context)=> Login(),
-  },
-));
-
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-@override
-Widget build(BuildContext context) {
-return MaterialApp(
-home: Scaffold(
-appBar: AppBar(
-title: Text('Get Current Date in Flutter')
-),
-body: Center(
-child: GetDate()
-)
-)
-);
-}
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            appBar: AppBar(
+                backgroundColor:Colors.black,
+
+
+                title: Text('Sign In To The CAA')
+            ),
+            body: Center(
+                child: GetDate()
+            )
+        )
+    );
+  }
 }
 class Back extends StatefulWidget {
   @override
@@ -39,56 +34,61 @@ class _BackState extends State<Back> {
 
 class GetDate extends StatefulWidget {
 
-_GetDateState createState() => _GetDateState();
-
+  _GetDateState createState() => _GetDateState();
 
 }
 
 class _GetDateState extends State<GetDate> {
 
-String finalDate = '';
+  String finalDate = '';
 
-getCurrentDate(){
+  getCurrentDate(){
 
-var date = new DateTime.now().toString();
+    var date = new DateTime.now().toString();
 
-var dateParse = DateTime.parse(date);
+    var dateParse = DateTime.parse(date);
 
-var formattedDate = "${dateParse.day}-${dateParse.month}-${dateParse.year}";
+    var formattedDate = "${dateParse.day}-${dateParse.month}-${dateParse.year}";
 
-setState(() {
+    setState(() {
 
-finalDate = formattedDate.toString() ;
+      finalDate = formattedDate.toString() ;
 
-});
+    });
 
-}
+  }
 
-@override
-Widget build(BuildContext context) {
-return Scaffold(
-body: Center(
-child: Column(
-mainAxisAlignment: MainAxisAlignment.center,
-children: <Widget>[
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
 
-Padding(
-padding: EdgeInsets.all(8.0),
-child :
-Text("Date = $finalDate", style: TextStyle(fontSize: 20), textAlign: TextAlign.center,)
-),
+              Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child :
+                  Text("Date Of Sign In = $finalDate,Welcome to the CCA",
 
-RaisedButton(
-onPressed: getCurrentDate,
-color: Colors.green,
-textColor: Colors.white,
-padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-child: Text('Click Here To Get Current Date in Flutter'),
-),
-],
-),
-)
+                    style: TextStyle(fontSize: 50),
+                    textAlign: TextAlign.center,
 
-);
-}
+                  )
+              ),
+
+              RaisedButton(
+                onpressed:getCurrentDate,
+                color: Colors.black,
+                textColor: Colors.white,
+                padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                child: Text('Sign In',
+                    style: TextStyle(fontSize: 30)
+                ),
+              ),
+
+            ],
+          ),
+        ));
+  }
 }

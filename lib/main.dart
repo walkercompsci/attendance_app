@@ -25,6 +25,17 @@ child: GetDate()
 );
 }
 }
+class Back extends StatefulWidget {
+  @override
+  _BackState createState() => _BackState();
+}
+
+class _BackState extends State<Back> {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
 
 class GetDate extends StatefulWidget {
 

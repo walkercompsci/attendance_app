@@ -82,10 +82,13 @@ class _GetDateState extends State<GetDate> {
                     style: TextStyle(fontSize: 50)
                 ),
               ),
+
               FlatButton.icon(
                 padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
                 onPressed:(){
-                  Navigator.pushNamed(context,'/main');
+                  Navigator.push(context, new MaterialPageRoute(
+                  builder: (context) => new Login())
+                  );
                 },
                 color: Colors.black,
                 icon: Icon(Icons.edit_location),

@@ -96,7 +96,7 @@ class _GetDateState extends State<GetDate> {
               Padding(
                   padding: EdgeInsets.all(8.0),
                   child :
-                  Text("Date Of Sign In = $finalDate,Welcome to the CCA",
+                  Text("Date Of Sign In = $finalDate",
 
                     style: TextStyle(fontSize: 50),
                     textAlign: TextAlign.center,
@@ -108,9 +108,10 @@ class _GetDateState extends State<GetDate> {
                 onPressed:getCurrentDate,
                 color: Colors.black,
                 textColor: Colors.white,
-                padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)),
+                padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
                 child: Text('Sign In',
-                    style: TextStyle(fontSize: 30)
+                    style: TextStyle(fontSize: 50)
                 ),
               ),
 

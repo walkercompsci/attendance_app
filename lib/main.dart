@@ -26,36 +26,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-class Back extends StatefulWidget {
-  @override
-  _BackState createState() => _BackState();
-}
-
-class _BackState extends State<Back> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: <Widget>[
-          Padding(
-      padding: EdgeInsets.all(8.0),
-          ),
-          FlatButton.icon(
-            onPressed:(){
-              Navigator.pushNamed(context,'/login');
-            },
-            color: Colors.red,
-            padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-            icon: Icon(Icons.edit_location),
-            label: Text('edit location'),
-          ),
-        ],
-      ),
-    ),);
-  }
-}
 
 class GetDate extends StatefulWidget {
 
@@ -111,7 +81,16 @@ class _GetDateState extends State<GetDate> {
                     style: TextStyle(fontSize: 30)
                 ),
               ),
-
+              FlatButton.icon(
+                padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                onPressed:(){
+                  Navigator.pushNamed(context,'/main');
+                },
+                color: Colors.black,
+                icon: Icon(Icons.edit_location),
+                textColor: Colors.white,
+                label: Text('edit location'),
+              ),
             ],
           ),
         ));

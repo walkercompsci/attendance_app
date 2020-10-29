@@ -6,7 +6,7 @@ void main() => runApp(MaterialApp(
   routes:{
    '/login': (context) => Login(),
     '/main': (context) => MyApp(),
-  },
+    '/add': (context) => Add(),
 
 ));
 
@@ -83,20 +83,18 @@ class _GetDateState extends State<GetDate> {
                 ),
               ),
 
-              FlatButton.icon(
+              FlatButton(
                 padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                onPressed:(){
-                  Navigator.push(context, new MaterialPageRoute(
-                  builder: (context) => new Login())
-                  );
-                },
                 color: Colors.black,
-                icon: Icon(Icons.edit_location),
-                textColor: Colors.white,
-                label: Text('edit location'),
+               textColor: Colors.white,
+                shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0)),
+                child: Text("add New student)",
+                  style: TextStyle(fontSize:30 )
               ),
-            ],
+              ),
+          ],
           ),
-        ));
+          ),
+        );
   }
 }

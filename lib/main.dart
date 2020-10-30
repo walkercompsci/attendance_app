@@ -14,12 +14,21 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+
         home: Scaffold(
+
             appBar: AppBar(
-                backgroundColor:Colors.black,
-                title: Text('Sign In To The CAA')
+
+                backgroundColor:Colors.orange[500],
+
+                title: const Text('Sign In To The CAA', style: TextStyle(
+                  color: Colors.black,
+                ),
+
+                )
             ),
             body: Center(
+
                 child: GetDate()
             )
         )
@@ -56,6 +65,7 @@ class _GetDateState extends State<GetDate> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.black45,
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

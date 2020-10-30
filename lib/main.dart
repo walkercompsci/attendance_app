@@ -6,7 +6,7 @@ void main() => runApp(MaterialApp(
   routes:{
    '/login': (context) => Login(),
     '/main': (context) => MyApp(),
-  },
+    '/add': (context) => Add(),
 
 ));
 
@@ -92,18 +92,19 @@ class _GetDateState extends State<GetDate> {
                     style: TextStyle(fontSize: 50)
                 ),
               ),
-              FlatButton.icon(
+
+              FlatButton(
                 padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                onPressed:(){
-                  Navigator.pushNamed(context,'/main');
-                },
                 color: Colors.black,
-                icon: Icon(Icons.edit_location),
-                textColor: Colors.white,
-                label: Text('edit location'),
+               textColor: Colors.white,
+                shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0)),
+                child: Text("add New student)",
+                  style: TextStyle(fontSize:30 )
               ),
-            ],
+              ),
+          ],
           ),
-        ));
+          ),
+        );
   }
 }

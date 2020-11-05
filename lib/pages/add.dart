@@ -1,3 +1,4 @@
+import 'package:attendance_app/pages/login.dart';
 import 'package:flutter/material.dart';
 
 
@@ -12,7 +13,7 @@ class _AddState extends State<Add> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text('Attendance Club App'),
+        title: Text('Add Student '),
         centerTitle: true,
         backgroundColor: Colors.black,
       ),
@@ -20,10 +21,16 @@ class _AddState extends State<Add> {
         child: Column(
           children: <Widget>[
             FlatButton.icon(
+              color: Colors.black,
+              textColor: Colors.white,
+              shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0)),
               onPressed:(){
-                Navigator.pushNamed(context,'/main');
+                Navigator.push(context, new MaterialPageRoute(
+                  builder: (context) =>
+                      new Login()
+                ));
               },
-              icon: Icon(Icons.edit_location),
+              icon: Icon(Icons.add),
               label: Text('edit location'),
             ),
           ],

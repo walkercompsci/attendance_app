@@ -95,12 +95,18 @@ class _GetDateState extends State<GetDate> {
                 ),
               ),
 
-              FlatButton(
+              RaisedButton(
                 padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
                 color: Colors.black,
                textColor: Colors.white,
                 shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0)),
-                child: Text("add New student)",
+                onPressed: () {
+                  Navigator.push(context, new MaterialPageRoute(
+                      builder: (context)=>
+                  new Add())
+                  );
+                },
+                child: Text("Add New Student",
                   style: TextStyle(fontSize:30 )
               ),
               ),

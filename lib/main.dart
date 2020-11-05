@@ -1,13 +1,15 @@
+import 'package:attendance_app/pages/add.dart';
 import 'package:flutter/material.dart';
 import 'package:attendance_app/pages/login.dart';
 
 void main() => runApp(MaterialApp(
   home: Login(),
   routes:{
-   '/login': (context) => Login(),
-    '/main': (context) => MyApp(),
-    '/add': (context) => Add(),
+'/login': (context) => Login(),
+'/main': (context) => MyApp(),
+'/add': (context) => Add(),
 
+}
 ));
 
 class MyApp extends StatelessWidget {

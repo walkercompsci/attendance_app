@@ -21,13 +21,15 @@ class MyApp extends StatelessWidget {
 
             appBar: AppBar(
 
-                backgroundColor:Colors.orange[500],
-
                 title: const Text('Sign In To The CAA', style: TextStyle(
                   color: Colors.black,
                 ),
 
-                )
+                ),
+                actions: [
+                  Icon(Icons.search),
+              ],
+              backgroundColor:Color(0xFFcf7500),
             ),
             body: Center(
 

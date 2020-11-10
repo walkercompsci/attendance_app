@@ -1,9 +1,10 @@
 import 'package:attendance_app/pages/add.dart';
+import 'package:attendance_app/pages/teacherpage.dart';
 import 'package:flutter/material.dart';
 import 'package:attendance_app/pages/login.dart';
 
 void main() => runApp(MaterialApp(
-  home: Login(),
+  home: LoginButton(),
   routes:{
 '/login': (context) => Login(),
 '/main': (context) => MyApp(),

@@ -18,39 +18,39 @@ class _AddNewStudentState extends State<AddNewStudent> {
         backgroundColor: Colors.black,
       ),
       body: SafeArea(
-      child: Column(
-    children: <Widget>[
-    FlatButton.icon(
-    color: Colors.black,
-    textColor: Colors.white,
-    shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0)),
-    onPressed:() {
-      Navigator.push(context, new MaterialPageRoute(
-          builder: (context) =>
-          new Add()
-      ));
-    },
-      icon: Icon(Icons.add),
-      label: Text('Add New Student'),
-    ),
+        child: Column(
+           children: <Widget>[
+            FlatButton.icon(
+              color: Colors.black,
+              textColor: Colors.white,
+              shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0)),
+              onPressed:() {
+                Navigator.push(context, new MaterialPageRoute(
+                  builder: (context) =>
+                    new Add()
+                ));
+              },
+              icon: Icon(Icons.add),
+              label: Text('Add New Student'),
+        ),
 
 
-      FlatButton.icon(
-        color: Colors.black,
-        textColor: Colors.white,
-        shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0)),
-        onPressed:() {
-          Navigator.push(context, new MaterialPageRoute(
-              builder: (context) =>
-              new Login()
-          ));
-        },
-        icon: Icon(Icons.add),
-        label: Text('Student Login'),
+            FlatButton.icon(
+              color: Colors.black,
+              textColor: Colors.white,
+              shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0)),
+              onPressed:() {
+                Navigator.push(context, new MaterialPageRoute(
+                builder: (context) =>
+                  new Login()
+                ));
+              },
+              icon: Icon(Icons.add),
+              label: Text('Student Login'),
+            ),
+          ],
+        ),
       ),
-    ],
-    ),
-    ),
     );
     }
   }

@@ -1,12 +1,13 @@
 import 'package:attendance_app/pages/add.dart';
+import 'package:attendance_app/pages/location.dart';
 import 'package:attendance_app/pages/teacherpage.dart';
 import 'package:flutter/material.dart';
 import 'package:attendance_app/pages/login.dart';
 import 'package:firebase_core/firebase_core.dart';
 
-void main() => runApp(MaterialApp(
-  home: LoginButton(),
-  routes:{
+void main() => runApp(MyApp(
+
+
 '/login': (context) => Login(),
 '/main': (context) => MyApp(),
 '/add': (context) => Add(),

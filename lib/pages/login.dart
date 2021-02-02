@@ -1,4 +1,4 @@
-import 'package:attendance_app/main.dart';
+
 import 'package:attendance_app/pages/add.dart';
 import 'package:flutter/material.dart';
 
@@ -11,13 +11,10 @@ class Login extends StatefulWidget {
 class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return MaterialApp(
+        home: Scaffold(
         backgroundColor: Colors.white,
-        appBar: AppBar(
-          title: Text('Attendance Club App'),
-          centerTitle: true,
-          backgroundColor: Colors.black,
-        ),
+
         body: SafeArea(
           child: Column(
             children: <Widget>[
@@ -29,7 +26,7 @@ class _LoginState extends State<Login> {
                 onPressed:(){
                   Navigator.push(context, new MaterialPageRoute(
                       builder: (context)=>
-                      new MyApp())
+                      new Column())
                   );
                 },
                 icon: Icon(Icons.edit_location),
@@ -54,7 +51,7 @@ class _LoginState extends State<Login> {
             ],
         ),
         ),
-      );
+      ));
     }
   }
 

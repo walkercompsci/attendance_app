@@ -3,16 +3,18 @@ import 'package:attendance_app/pages/location.dart';
 import 'package:attendance_app/pages/teacherpage.dart';
 import 'package:flutter/material.dart';
 import 'package:attendance_app/pages/login.dart';
+import 'package:attendance_app/pages/error.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:attendance_app/pages/load.dart';
 
 void main() => runApp(MyApp(
 
+//this was causing errors and i don't know why, will fix later
+/* '/login': (context) => Login(),
+ '/main': (context) => MyApp(),
+ '/add': (context) => Add(),*/
 
-'/login': (context) => Login(),
-'/main': (context) => MyApp(),
-'/add': (context) => Add(),
 
-}
 ));
 
 
@@ -29,12 +31,12 @@ class App extends StatelessWidget {
       builder: (context, snapshot) {
         // Check for errors
         if (snapshot.hasError) {
-          return SomethingWentWrong();
+          return Error();
         }
 
         // Once complete, show your application
         if (snapshot.connectionState == ConnectionState.done) {
-          return MyAwesomeApp();
+          return Login();
         }
 
         // Otherwise, show something whilst waiting for initialization to complete

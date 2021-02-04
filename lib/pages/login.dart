@@ -32,7 +32,7 @@ class _LoginState extends State<Login> {
                 icon: Icon(Icons.edit_location),
                 label: Text('edit location'),
               ),
-
+              //THIS IS WHEREE THE TABLE THINGY TYPED WILL GO 
               RaisedButton(
                 padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
                 color: Colors.black,

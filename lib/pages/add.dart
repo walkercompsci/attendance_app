@@ -15,7 +15,7 @@ class _AddState extends State<Add> {
       appBar: AppBar(
         title: Text('Add Student '),
         centerTitle: true,
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.green,
       ),
       body: SafeArea(
         child: Column(
@@ -31,7 +31,7 @@ class _AddState extends State<Add> {
                 ));
               },
               icon: Icon(Icons.add),
-              label: Text('edit location'),
+              label: Text('This button leads somewhere else'),
             ),
           ],
         ),

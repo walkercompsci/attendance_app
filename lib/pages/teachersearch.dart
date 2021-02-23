@@ -13,7 +13,7 @@ class _AddNewStudentState extends State<AddNewStudent> {
   Widget build(BuildContext context) {
     return Scaffold(backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text('Club Attendance App1'),
+        title: Text('Student Search'),
         centerTitle: true,
         backgroundColor: Colors.black,
       ),
@@ -48,6 +48,13 @@ class _AddNewStudentState extends State<AddNewStudent> {
               icon: Icon(Icons.add),
               label: Text('Student Login'),
             ),
+
+
+             IconButton(
+               onPressed: (){
+               },
+               icon: Icon(Icons.search),
+             )
           ],
         ),
       ),

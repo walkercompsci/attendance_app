@@ -31,7 +31,7 @@ class _AddState extends State<Add> {
                 ));
               },
               icon: Icon(Icons.add),
-              label: Text('edit location'),
+              label: Text('This button leads somewhere else'),
             ),
           ],
         ),

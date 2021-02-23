@@ -1,5 +1,6 @@
 
 import 'package:attendance_app/pages/add.dart';
+import 'package:attendance_app/pages/teachersearch.dart';
 import 'package:flutter/material.dart';
 
 
@@ -26,7 +27,7 @@ class _LoginState extends State<Login> {
                 onPressed:(){
                   Navigator.push(context, new MaterialPageRoute(
                       builder: (context)=>
-                      new Column())
+                      new AddNewStudent())
                   );
                 },
                 icon: Icon(Icons.edit_location),

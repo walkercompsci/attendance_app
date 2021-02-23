@@ -15,7 +15,7 @@ class _AddState extends State<Add> {
       appBar: AppBar(
         title: Text('Add Student '),
         centerTitle: true,
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.green,
       ),
       body: SafeArea(
         child: Column(

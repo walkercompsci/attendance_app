@@ -14,11 +14,18 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.orangeAccent,
 
         body: SafeArea(
+
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+
+
+
             children: <Widget>[
+
+
               FlatButton.icon(
                 padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
                 color:Colors.blue,
@@ -49,30 +56,56 @@ class _LoginState extends State<Login> {
                     style: TextStyle(fontSize:20 )
                 ),
               ),
+
+
               DataTable(
+
                 columns: [
+
                   DataColumn(label:Text('Name')),
                   DataColumn(label:Text('Graduation Year')),
+                  DataColumn(label:Text('Club Hours')),
                 ],
                 rows: [
-                  DataRow(cells: [
+                  DataRow(
+                      color: MaterialStateProperty.resolveWith<Color>(
+                              (Set<MaterialState> states) {
+                            return Colors.white30;
+                          }),
+                      cells: [
                     DataCell(Text('Poggers')),
                     DataCell(Text('2021')),
+                    DataCell(Text('69')),
 
                 ]),
-                DataRow(cells: [
+                DataRow(
+                    color: MaterialStateProperty.resolveWith<Color>(
+                            (Set<MaterialState> states) {
+                          return Colors.white30;
+                        }),
+                    cells: [
                   DataCell(Text('yehaw')),
                   DataCell(Text('2025')),
+                  DataCell(Text('69')),
 
                 ]),
-                  DataRow(cells: [
+                  DataRow(
+                      color: MaterialStateProperty.resolveWith<Color>(
+                              (Set<MaterialState> states) {
+                            return Colors.white30;
+                          }),
+                      cells: [
                     DataCell(Text('painbot')),
                     DataCell(Text('2054')),
+                    DataCell(Text('69')),
 
                   ]),
                 ],
               )
+
+
             ],
+
 
 
         ),

@@ -11,14 +11,14 @@ class AddStudent{
 
   AddStudent(this.name,this.age,this.year);
 
-  Future addStudent() async{
+  Future addStudent() async {
     return student
         .add({
-          'full_name':name,
-          'age':age,
-          'year':year
-        })
-        .then((value)=>print("User Added"))
-        .catchError((error)=>print("Failed to add user: $error"));
+      'full_name': name,
+      'age': age,
+      'year': year
+    })
+        .then((value) => print("User Added"))
+        .catchError((error) => print("Failed to add user: $error"));
   }
 }

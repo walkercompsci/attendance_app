@@ -6,11 +6,16 @@ import 'package:attendance_app/services/addStudent';
 class Add extends StatefulWidget {
   @override
   _AddState createState() => _AddState();
+  String name="void";
+  int age=0;
+  int year=0;
 
 }
 
 class _AddState extends State<Add> {
+
   final AddStudent _addStudent = AddStudent('John',32,12);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

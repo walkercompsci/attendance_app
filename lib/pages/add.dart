@@ -1,13 +1,16 @@
 import 'package:attendance_app/pages/login.dart';
 import 'package:flutter/material.dart';
+import 'package:attendance_app/services/addStudent';
 
 
 class Add extends StatefulWidget {
   @override
   _AddState createState() => _AddState();
+
 }
 
 class _AddState extends State<Add> {
+  final AddStudent _addStudent = AddStudent('John',32,12);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,8 +33,18 @@ class _AddState extends State<Add> {
                       new Login()
                 ));
               },
-              icon: Icon(Icons.add),
               label: Text('This button leads somewhere else'),
+              icon: Icon(Icons.add),
+            ),
+            FlatButton.icon(
+              color: Colors.black,
+              textColor: Colors.white,
+              shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0)),
+              onPressed:() async{
+                await _addStudent.addStudent();
+              },
+              label: Text('Add student'),
+              icon: Icon(Icons.add),
             ),
           ],
         ),

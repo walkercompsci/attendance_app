@@ -41,6 +41,16 @@ class _AddState extends State<Add> {
               label: Text('This button leads somewhere else'),
               icon: Icon(Icons.add),
             ),
+            TextField(
+              decoration: InputDecoration(
+                  border: Border(
+                    top: BorderSide(width:18.0),
+                    bottom: BorderSide(width:18.0),
+                  ),
+                  hintText: 'Enter Name'
+
+              ),
+            ),
             FlatButton.icon(
               color: Colors.black,
               textColor: Colors.white,

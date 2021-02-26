@@ -17,98 +17,106 @@ class _LoginState extends State<Login> {
         backgroundColor: Colors.orangeAccent,
 
         body: SafeArea(
-
-          child: Column(
+          child:Row(
             mainAxisAlignment: MainAxisAlignment.center,
-
-
-
             children: <Widget>[
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
 
 
-              FlatButton.icon(
-                padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                color:Colors.blue,
-                textColor: Colors.white,
-                shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0)),
-                onPressed:(){
-                  Navigator.push(context, new MaterialPageRoute(
-                      builder: (context)=>
-                      new AddNewStudent())
-                  );
-                },
-                icon: Icon(Icons.edit_location),
-                label: Text('edit location'),
-              ),
-              //THIS IS WHEREE THE TABLE THINGY TYPED WILL GO hhhhhhhh
-              RaisedButton(
-                padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                color: Colors.black,
-                textColor: Colors.white,
-                shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0)),
-                onPressed: () {
-                  Navigator.push(context, new MaterialPageRoute(
-                      builder: (context)=>
-                      new Add())
-                  );
-                },
-                child: Text("Add New Student",
-                    style: TextStyle(fontSize:20 )
-                ),
-              ),
+
+                children: <Widget>[
+                  FlatButton.icon(
+                    padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                    color:Colors.blue,
+                    textColor: Colors.white,
+                    shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0)),
+                    onPressed:(){
+                      Navigator.push(context, new MaterialPageRoute(
+                          builder: (context)=>
+                          new AddNewStudent())
+                      );
+                    },
+                    icon: Icon(Icons.edit_location),
+                    label: Text('edit location'),
+                  ),
+                  //THIS IS WHEREE THE TABLE THINGY TYPED WILL GO hhhhhhhh
+                  RaisedButton(
+                    padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                    color: Colors.black,
+                    textColor: Colors.white,
+                    shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0)),
+                    onPressed: () {
+                      Navigator.push(context, new MaterialPageRoute(
+                          builder: (context)=>
+                          new Add())
+                      );
+                    },
+                    child: Text("Add New Student",
+                        style: TextStyle(fontSize:20 )
+                    ),
+                  ),
+                  Text("Student Table "
+                      
+
+                  ),
 
 
-              DataTable(
+                  DataTable(
 
-                columns: [
+                    columns: [
 
-                  DataColumn(label:Text('Name')),
-                  DataColumn(label:Text('Graduation Year')),
-                  DataColumn(label:Text('Club Hours')),
+                      DataColumn(label:Text('Name')),
+                      DataColumn(label:Text('Graduation Year')),
+                      DataColumn(label:Text('Club Hours')),
+                    ],
+                    rows: [
+                      DataRow(
+                          color: MaterialStateProperty.resolveWith<Color>(
+                                  (Set<MaterialState> states) {
+                                return Colors.white30;
+                              }),
+                          cells: [
+                            DataCell(Text('Poggers')),
+                            DataCell(Text('2021')),
+                            DataCell(Text('69')),
+
+                          ]),
+                      DataRow(
+                          color: MaterialStateProperty.resolveWith<Color>(
+                                  (Set<MaterialState> states) {
+                                return Colors.white30;
+                              }),
+                          cells: [
+                            DataCell(Text('yehaw')),
+                            DataCell(Text('2025')),
+                            DataCell(Text('69')),
+
+                          ]),
+                      DataRow(
+                          color: MaterialStateProperty.resolveWith<Color>(
+                                  (Set<MaterialState> states) {
+                                return Colors.white30;
+                              }),
+                          cells: [
+                            DataCell(Text('painbot')),
+                            DataCell(Text('2054')),
+                            DataCell(Text('69')),
+
+                          ]),
+                    ],
+                  )
+
+
                 ],
-                rows: [
-                  DataRow(
-                      color: MaterialStateProperty.resolveWith<Color>(
-                              (Set<MaterialState> states) {
-                            return Colors.white30;
-                          }),
-                      cells: [
-                    DataCell(Text('Poggers')),
-                    DataCell(Text('2021')),
-                    DataCell(Text('69')),
-
-                ]),
-                DataRow(
-                    color: MaterialStateProperty.resolveWith<Color>(
-                            (Set<MaterialState> states) {
-                          return Colors.white30;
-                        }),
-                    cells: [
-                  DataCell(Text('yehaw')),
-                  DataCell(Text('2025')),
-                  DataCell(Text('69')),
-
-                ]),
-                  DataRow(
-                      color: MaterialStateProperty.resolveWith<Color>(
-                              (Set<MaterialState> states) {
-                            return Colors.white30;
-                          }),
-                      cells: [
-                    DataCell(Text('painbot')),
-                    DataCell(Text('2054')),
-                    DataCell(Text('69')),
-
-                  ]),
-                ],
-              )
-
-
-            ],
 
 
 
-        ),
+              ),
+            ]
+          )
+
+
 
         ),
       ));

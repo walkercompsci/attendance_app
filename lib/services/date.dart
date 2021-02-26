@@ -33,7 +33,6 @@ class _GetDateState extends State<GetDate> {
       backgroundColor: Colors.black45,
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
 
             Padding(

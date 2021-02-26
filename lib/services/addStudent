@@ -2,26 +2,23 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class AddStudent extends StatelessWidget {
+class AddStudent{
   final String name;
   final int age;
   final int year;
 
+  CollectionReference student = FirebaseFirestore.instance.collection('clubs/robotics_club/students');
+
   AddStudent(this.name,this.age,this.year);
 
-  @override
-  Widget build(BuildContext context) {
-    CollectionReference clubs=FirebaseFirestore.instance.collection('clubs/robotics_club/students');
-
-    Future<void> addStudent(){
-      return users
-          .add({
-            'full_name':name,
-            'age':age,
-            'year':year;
-          })
-          .then((value)=>print("User Added"))
-          .catchError((error)=>print("Failed to add user: $error"));
-    }
+  Future addStudent() async {
+    return student
+        .add({
+      'full_name': name,
+      'age': age,
+      'year': year
+    })
+        .then((value) => print("User Added"))
+        .catchError((error) => print("Failed to add user: $error"));
   }
 }

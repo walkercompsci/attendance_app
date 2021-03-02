@@ -26,41 +26,61 @@ class _AddState extends State<Add> {
         backgroundColor: Colors.green,
       ),
       body: SafeArea(
-        child: Column(
+        child:Row(
           children: <Widget>[
-            FlatButton.icon(
-              color: Colors.black,
-              textColor: Colors.white,
-              shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0)),
-              onPressed:(){
-                Navigator.push(context, new MaterialPageRoute(
-                  builder: (context) =>
-                      new Login()
-                ));
-              },
-              label: Text('This button leads somewhere else'),
-              icon: Icon(Icons.add),
-            ),
-            TextField(
-              decoration: InputDecoration(
-                  border: Border(
-                    top: BorderSide(width:18.0),
-                    bottom: BorderSide(width:18.0),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                Container(
+                  width:250.0,
+                  child:TextField(
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.greenAccent),
+                        gapPadding: 50.0,
+                      ),
+                      hintText: 'Enter Name'
+                    ),
                   ),
-                  hintText: 'Enter Name'
+                ),
+              ]
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    FlatButton.icon(
+                      color: Colors.black,
+                      textColor: Colors.white,
+                      shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0)),
+                      onPressed:(){
+                        Navigator.push(context, new MaterialPageRoute(
+                            builder: (context) =>
+                            new Login()
+                        ));
+                      },
+                      label: Text('This button leads somewhere else'),
+                      icon: Icon(Icons.add),
+                    ),
 
-              ),
+
+                    FlatButton.icon(
+                      color: Colors.black,
+                      textColor: Colors.white,
+                      shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0)),
+                      onPressed:() async{
+                        await _addStudent.addStudent();
+                      },
+                      label: Text('Add student'),
+                      icon: Icon(Icons.add),
+                    ),
+                  ],
+                ),
+              ]
             ),
-            FlatButton.icon(
-              color: Colors.black,
-              textColor: Colors.white,
-              shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0)),
-              onPressed:() async{
-                await _addStudent.addStudent();
-              },
-              label: Text('Add student'),
-              icon: Icon(Icons.add),
-            ),
+
           ],
         ),
       ),

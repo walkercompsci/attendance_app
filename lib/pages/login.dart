@@ -56,8 +56,14 @@ class _LoginState extends State<Login> {
                         style: TextStyle(fontSize:20 )
                     ),
                   ),
-                  Text("Student Table "
-                      
+                           Text("Student's Enrolled",
+
+                      style: TextStyle(
+                          fontSize: 50,
+                        decoration: TextDecoration.underline,
+
+                      ),
+
 
                   ),
 
@@ -66,9 +72,25 @@ class _LoginState extends State<Login> {
 
                     columns: [
 
-                      DataColumn(label:Text('Name')),
-                      DataColumn(label:Text('Graduation Year')),
-                      DataColumn(label:Text('Club Hours')),
+                      DataColumn(
+                          label:Text('Name',
+                        style: TextStyle(
+                            decoration: TextDecoration.underline,
+                            fontSize: 25,
+                        ),
+                      ) ),
+                      DataColumn(label:Text('Graduation Year',
+                        style: TextStyle(
+                            fontSize: 25,
+                          decoration: TextDecoration.underline,
+                      ),
+                      ) ),
+                      DataColumn(label:Text('Club Hours',
+                        style: TextStyle(
+                          fontSize: 25,
+                          decoration: TextDecoration.underline,
+                        ),
+                      ) ),
                     ],
                     rows: [
                       DataRow(
@@ -77,9 +99,25 @@ class _LoginState extends State<Login> {
                                 return Colors.white30;
                               }),
                           cells: [
-                            DataCell(Text('Poggers')),
-                            DataCell(Text('2021')),
-                            DataCell(Text('69')),
+                            DataCell(Text('Poggers',
+
+                              style: TextStyle(
+                                fontSize: 25,
+
+                              ),
+                            ) ),
+                            DataCell(Text('2021',
+                              style: TextStyle(
+                                fontSize: 25,
+
+                              ),
+                            ) ),
+                            DataCell(Text('69',
+                              style: TextStyle(
+                                fontSize: 25,
+
+                              ),
+                            ) ),
 
                           ]),
                       DataRow(
@@ -88,9 +126,26 @@ class _LoginState extends State<Login> {
                                 return Colors.white30;
                               }),
                           cells: [
-                            DataCell(Text('yehaw')),
-                            DataCell(Text('2025')),
-                            DataCell(Text('69')),
+                            DataCell(Text('yehaw',
+                              style: TextStyle(
+                              fontSize: 25,
+                                color:Colors.red,
+                              ),
+                              ) ),
+
+                            DataCell(Text('2025',
+                              style: TextStyle(
+                                fontSize: 25,
+                                color:Colors.red,
+                              ),
+                            ) ),
+
+                            DataCell(Text('69',
+                              style: TextStyle(
+                                fontSize: 25,
+                                color:Colors.red,
+                              ),
+                            ) ),
 
                           ]),
                       DataRow(
@@ -99,9 +154,67 @@ class _LoginState extends State<Login> {
                                 return Colors.white30;
                               }),
                           cells: [
-                            DataCell(Text('painbot')),
-                            DataCell(Text('2054')),
-                            DataCell(Text('69')),
+                            DataCell(Text('painbot',
+                              style: TextStyle(
+                                fontSize: 25,
+                              ),
+                            ) ),
+                            DataCell(Text('2054',
+                              style: TextStyle(
+                                fontSize: 25,
+                              ),
+                            ) ),
+                            DataCell(Text('69',style: TextStyle(
+                              fontSize: 25,
+                            ),
+                            ) ),
+
+                          ]),
+                      DataRow(
+                          color: MaterialStateProperty.resolveWith<Color>(
+                                  (Set<MaterialState> states) {
+                                return Colors.white30;
+                              }),
+                          cells: [
+                            DataCell(Text('painbot',
+                              style: TextStyle(
+                                fontSize: 25,
+                                color:Colors.red,
+                              ),
+                            ) ),
+                            DataCell(Text('2054',
+                              style: TextStyle(
+                                fontSize: 25,
+                                color:Colors.red,
+                              ),
+                            ) ),
+                            DataCell(Text('69',style: TextStyle(
+                              fontSize: 25,
+                              color:Colors.red,
+                            ),
+                            ) ),
+
+                          ]),
+                      DataRow(
+                          color: MaterialStateProperty.resolveWith<Color>(
+                                  (Set<MaterialState> states) {
+                                return Colors.white30;
+                              }),
+                          cells: [
+                            DataCell(Text('painbot',
+                              style: TextStyle(
+                                fontSize: 25,
+                              ),
+                            ) ),
+                            DataCell(Text('2054',
+                              style: TextStyle(
+                                fontSize: 25,
+                              ),
+                            ) ),
+                            DataCell(Text('69',style: TextStyle(
+                              fontSize: 25,
+                            ),
+                            ) ),
 
                           ]),
                     ],

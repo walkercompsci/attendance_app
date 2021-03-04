@@ -43,6 +43,30 @@ class _AddState extends State<Add> {
                     ),
                   ),
                 ),
+                Container(
+                  width:250.0,
+                  child:TextField(
+                    decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.greenAccent),
+                          gapPadding: 50.0,
+                        ),
+                        hintText: 'Enter Age'
+                    ),
+                  ),
+                ),
+                Container(
+                  width:250.0,
+                  child:TextField(
+                    decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.greenAccent),
+                          gapPadding: 50.0,
+                        ),
+                        hintText: 'Enter Graduation Year'
+                    ),
+                  ),
+                ),
               ]
             ),
             Row(

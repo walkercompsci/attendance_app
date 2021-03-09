@@ -1,22 +1,29 @@
 import 'package:attendance_app/pages/login.dart';
 import 'package:flutter/material.dart';
 import 'package:attendance_app/services/addStudent';
+import 'package:attendance_app/services/textGet.dart';
 
 
 class Add extends StatefulWidget {
   @override
   _AddState createState() => _AddState();
-  String name="void";
-  int age=0;
-  int year=0;
+
 
 }
 
 class _AddState extends State<Add> {
 
-  final AddStudent _addStudent = AddStudent('John',32,12);
+  String name;
+  String age;
+  String year;
+
+  final AddStudent _addStudent = AddStudent();
+  TextGet nameGet=TextGet();
+  TextGet ageGet=TextGet();
+  TextGet yearGet=TextGet();
 
   @override
+
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
@@ -34,12 +41,39 @@ class _AddState extends State<Add> {
                 Container(
                   width:250.0,
                   child:TextField(
+                    controller:nameGet,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.greenAccent),
                         gapPadding: 50.0,
                       ),
                       hintText: 'Enter Name'
+                    ),
+                  ),
+                ),
+                Container(
+                  width:250.0,
+                  child:TextField(
+                    controller:ageGet,
+                    decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.greenAccent),
+                          gapPadding: 50.0,
+                        ),
+                        hintText: 'Enter Age'
+                    ),
+                  ),
+                ),
+                Container(
+                  width:250.0,
+                  child:TextField(
+                    controller:yearGet,
+                    decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.greenAccent),
+                          gapPadding: 50.0,
+                        ),
+                        hintText: 'Enter Graduation Year'
                     ),
                   ),
                 ),
@@ -71,7 +105,10 @@ class _AddState extends State<Add> {
                       textColor: Colors.white,
                       shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0)),
                       onPressed:() async{
-                        await _addStudent.addStudent();
+                        name=nameGet.text;
+                        age= ageGet.text;
+                        year= yearGet.text;
+                        await _addStudent.addStudent(name,age,year);
                       },
                       label: Text('Add student'),
                       icon: Icon(Icons.add),

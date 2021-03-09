@@ -1,4 +1,6 @@
 
+import 'dart:ui';
+
 import 'package:attendance_app/pages/add.dart';
 import 'package:attendance_app/pages/teachersearch.dart';
 import 'package:flutter/material.dart';
@@ -17,18 +19,25 @@ class _LoginState extends State<Login> {
         backgroundColor: Colors.orangeAccent,
 
         body: SafeArea(
-          child:Row(
+         
+         child:Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+
+
               Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-
-
 
                 children: <Widget>[
+
+                 Image.network('https://adulteducation.warren.k12.in.us/assets/apptegy_cms/themes/msdwarrenin/logo2_walker-career-center-474c503d28817c64d51e08d37b1a75aa.png',
+
+                   height: 200,
+                   width: 200,
+                 ),
+
                   FlatButton.icon(
                     padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                    color:Colors.blue,
+                    color:Colors.green,
                     textColor: Colors.white,
                     shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0)),
                     onPressed:(){
@@ -51,6 +60,7 @@ class _LoginState extends State<Login> {
                           builder: (context)=>
                           new Add())
                       );
+
                     },
                     child: Text("Add New Student",
                         style: TextStyle(fontSize:20 )
@@ -66,6 +76,9 @@ class _LoginState extends State<Login> {
 
 
                   ),
+
+
+
 
 
                   DataTable(
@@ -232,6 +245,7 @@ class _LoginState extends State<Login> {
 
 
         ),
+
       ));
     }
   }

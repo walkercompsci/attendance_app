@@ -31,7 +31,7 @@ class _LoginState extends State<Login> {
 
                  Image.network('https://adulteducation.warren.k12.in.us/assets/apptegy_cms/themes/msdwarrenin/logo2_walker-career-center-474c503d28817c64d51e08d37b1a75aa.png',
 
-                   height: 200,
+                   height: 300,
                    width: 200,
                  ),
 

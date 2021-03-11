@@ -2,6 +2,7 @@ import 'package:attendance_app/pages/login.dart';
 import 'package:flutter/material.dart';
 import 'package:attendance_app/services/addStudent';
 import 'package:attendance_app/services/textGet.dart';
+import 'package:attendance_app/services/getStudent.dart';
 
 
 class Add extends StatefulWidget {
@@ -16,6 +17,8 @@ class _AddState extends State<Add> {
   String name;
   String age;
   String year;
+
+  GetStudent getStudent=GetStudent();
 
   final AddStudent _addStudent = AddStudent();
   TextGet nameGet=TextGet();
@@ -111,6 +114,16 @@ class _AddState extends State<Add> {
                         await _addStudent.addStudent(name,age,year);
                       },
                       label: Text('Add student'),
+                      icon: Icon(Icons.add),
+                    ),
+                    FlatButton.icon(
+                      color: Colors.black,
+                      textColor: Colors.white,
+                      shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0)),
+                      onPressed:() async{
+                        await getStudent.getStudent();
+                      },
+                      label: Text('Get student'),
                       icon: Icon(Icons.add),
                     ),
                   ],

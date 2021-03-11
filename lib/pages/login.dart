@@ -21,21 +21,58 @@ class _LoginState extends State<Login> {
         body: SafeArea(
          
          child:Row(
-            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-
 
               Column(
 
                 children: <Widget>[
+                  SizedBox(
+                    width:100,
+                    height:100,
+                    child: Image.network('https://adulteducation.warren.k12.in.us/assets/apptegy_cms/themes/msdwarrenin/logo2_walker-career-center-474c503d28817c64d51e08d37b1a75aa.png',
 
-                 Image.network('https://adulteducation.warren.k12.in.us/assets/apptegy_cms/themes/msdwarrenin/logo2_walker-career-center-474c503d28817c64d51e08d37b1a75aa.png',
+                      width:100,
+                      height:100,
 
-                   height: 300,
-                   width: 200,
-                 ),
+                    ),
+
+                  ),
+                  SizedBox(
+                    width:100,
+                    height:100,
+                    child: Image.network('https://adulteducation.warren.k12.in.us/assets/apptegy_cms/themes/msdwarrenin/logo2_walker-career-center-474c503d28817c64d51e08d37b1a75aa.png',
+
+                      width:100,
+                      height:100,
+
+                    ),
+
+                  ),
+
+
+
+
+
+
+
+
+
+
+
+                ],
+
+
+
+              ),
+              Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+
+
+                children: <Widget>[
+
 
                   FlatButton.icon(
+
                     padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
                     color:Colors.green,
                     textColor: Colors.white,

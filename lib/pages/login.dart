@@ -19,35 +19,72 @@ class _LoginState extends State<Login> {
         backgroundColor: Colors.orangeAccent,
 
         body: SafeArea(
-         
+
+
          child:Row(
             children: <Widget>[
+
+              SizedBox(
+                width:100,
+                height:100,
+                child: Image.network('https://adulteducation.warren.k12.in.us/assets/apptegy_cms/themes/msdwarrenin/logo2_walker-career-center-474c503d28817c64d51e08d37b1a75aa.png',
+
+                  width:100,
+                  height:100,
+
+                ),
+
+              ),
+
+
+              Text("Club Attendance App",
+
+                style: TextStyle(
+                  fontSize: 40,
+                  decoration: TextDecoration.underline,
+
+                ),
+
+
+              ),
+              FlatButton.icon(
+
+                padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                color:Colors.green,
+                textColor: Colors.white,
+                shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0)),
+                onPressed:(){
+                  Navigator.push(context, new MaterialPageRoute(
+                      builder: (context)=>
+                      new AddNewStudent())
+                  );
+                },
+                icon: Icon(Icons.search),
+                label: Text('Find A Student'),
+              ),
+              //THIS IS WHEREE THE TABLE THINGY TYPED WILL GO hhhhhhhh
+              RaisedButton(
+                padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                color: Colors.black,
+                textColor: Colors.white,
+                shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0)),
+                onPressed: () {
+                  Navigator.push(context, new MaterialPageRoute(
+                      builder: (context)=>
+                      new Add())
+                  );
+
+                },
+                child: Text(" New Student?",
+                    style: TextStyle(fontSize:20 )
+                ),
+              ),
 
               Column(
 
                 children: <Widget>[
-                  SizedBox(
-                    width:100,
-                    height:100,
-                    child: Image.network('https://adulteducation.warren.k12.in.us/assets/apptegy_cms/themes/msdwarrenin/logo2_walker-career-center-474c503d28817c64d51e08d37b1a75aa.png',
 
-                      width:100,
-                      height:100,
 
-                    ),
-
-                  ),
-                  SizedBox(
-                    width:100,
-                    height:100,
-                    child: Image.network('https://adulteducation.warren.k12.in.us/assets/apptegy_cms/themes/msdwarrenin/logo2_walker-career-center-474c503d28817c64d51e08d37b1a75aa.png',
-
-                      width:100,
-                      height:100,
-
-                    ),
-
-                  ),
 
 
 
@@ -71,38 +108,7 @@ class _LoginState extends State<Login> {
                 children: <Widget>[
 
 
-                  FlatButton.icon(
 
-                    padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                    color:Colors.green,
-                    textColor: Colors.white,
-                    shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0)),
-                    onPressed:(){
-                      Navigator.push(context, new MaterialPageRoute(
-                          builder: (context)=>
-                          new AddNewStudent())
-                      );
-                    },
-                    icon: Icon(Icons.edit_location),
-                    label: Text('edit location'),
-                  ),
-                  //THIS IS WHEREE THE TABLE THINGY TYPED WILL GO hhhhhhhh
-                  RaisedButton(
-                    padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                    color: Colors.black,
-                    textColor: Colors.white,
-                    shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0)),
-                    onPressed: () {
-                      Navigator.push(context, new MaterialPageRoute(
-                          builder: (context)=>
-                          new Add())
-                      );
-
-                    },
-                    child: Text("Add New Student",
-                        style: TextStyle(fontSize:20 )
-                    ),
-                  ),
                            Text("Student's Enrolled",
 
                       style: TextStyle(

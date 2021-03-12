@@ -4,9 +4,9 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 class GetStudent{
 
-  String name;
-  String age;
-  String year;
+  List<String> name=[];
+  List<String> age=[];
+  List<String> year=[];
 
   GetStudent();
 
@@ -16,9 +16,26 @@ class GetStudent{
         .get()
         .then((QuerySnapshot querySnapshot)=>{
           querySnapshot.docs.forEach((doc){
-            print(doc['full_name']);
+            name.add(doc['full_name']);
+            age.add(doc['age']);
+            year.add(doc['year']);
+            print(name);
+            print(age);
+            print(year);
           })
     });
+  }
+
+  List getNames(){
+    return name;
+  }
+
+  List getAges(){
+    return age;
+  }
+
+  List getYears(){
+    return year;
   }
 
 }

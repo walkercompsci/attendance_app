@@ -47,27 +47,33 @@ class _LoginState extends State<Login> {
 
 
               ),
-              FlatButton.icon(
+              RaisedButton.icon(
 
-                padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
                 color:Colors.green,
                 textColor: Colors.white,
-                shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0)),
+                shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(5.0)),
                 onPressed:(){
                   Navigator.push(context, new MaterialPageRoute(
                       builder: (context)=>
                       new AddNewStudent())
                   );
                 },
-                icon: Icon(Icons.search),
-                label: Text('Find A Student'),
+
+                label: Text('Find a Student',
+                  style: TextStyle(
+                    fontSize: 20,
+                  ),
+                ),
+                icon: Icon(Icons.account_circle_outlined),
               ),
-              //THIS IS WHEREE THE TABLE THINGY TYPED WILL GO hhhhhhhh
-              RaisedButton(
-                padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+
+
+              RaisedButton.icon(
+                padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
                 color: Colors.black,
                 textColor: Colors.white,
-                shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0)),
+                shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(5.0)),
                 onPressed: () {
                   Navigator.push(context, new MaterialPageRoute(
                       builder: (context)=>
@@ -75,10 +81,18 @@ class _LoginState extends State<Login> {
                   );
 
                 },
-                child: Text(" New Student?",
-                    style: TextStyle(fontSize:20 )
+
+
+                label: Text('Find a Student',
+                  style: TextStyle(
+                    fontSize: 20,
+                  ),
                 ),
+                icon: Icon(Icons.search),
               ),
+
+
+
 
               Column(
 
@@ -121,6 +135,10 @@ class _LoginState extends State<Login> {
                   ),
 
 
+                  Divider(
+                    thickness: 20,
+                    color: Colors.black,
+                  ),
 
 
 

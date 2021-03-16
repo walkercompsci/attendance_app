@@ -22,53 +22,110 @@ class _LoginState extends State<Login> {
         backgroundColor: Colors.orangeAccent,
 
         body: SafeArea(
-         
+
+
          child:Row(
-            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+
+              SizedBox(
+                width:100,
+                height:100,
+                child: Image.network('https://adulteducation.warren.k12.in.us/assets/apptegy_cms/themes/msdwarrenin/logo2_walker-career-center-474c503d28817c64d51e08d37b1a75aa.png',
+
+                  width:100,
+                  height:100,
+
+                ),
+
+              ),
+
+
+              Text("Club Attendance App",
+
+                style: TextStyle(
+                  fontSize: 40,
+                  decoration: TextDecoration.underline,
+
+                ),
+
+
+              ),
+              RaisedButton.icon(
+
+                padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                color:Colors.green,
+                textColor: Colors.white,
+                shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(5.0)),
+                onPressed:(){
+                  Navigator.push(context, new MaterialPageRoute(
+                      builder: (context)=>
+                      new AddNewStudent())
+                  );
+                },
+
+                label: Text('Find a Student',
+                  style: TextStyle(
+                    fontSize: 20,
+                  ),
+                ),
+                icon: Icon(Icons.account_circle_outlined),
+              ),
+
+
+              RaisedButton.icon(
+                padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                color: Colors.black,
+                textColor: Colors.white,
+                shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(5.0)),
+                onPressed: () {
+                  Navigator.push(context, new MaterialPageRoute(
+                      builder: (context)=>
+                      new Add())
+                  );
+
+                },
+
+
+                label: Text('Find a Student',
+                  style: TextStyle(
+                    fontSize: 20,
+                  ),
+                ),
+                icon: Icon(Icons.search),
+              ),
+
+
 
 
               Column(
 
                 children: <Widget>[
 
-                 Image.network('https://adulteducation.warren.k12.in.us/assets/apptegy_cms/themes/msdwarrenin/logo2_walker-career-center-474c503d28817c64d51e08d37b1a75aa.png',
 
-                   height: 300,
-                   width: 200,
-                 ),
 
-                  FlatButton.icon(
-                    padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                    color:Colors.green,
-                    textColor: Colors.white,
-                    shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0)),
-                    onPressed:(){
-                      Navigator.push(context, new MaterialPageRoute(
-                          builder: (context)=>
-                          new AddNewStudent())
-                      );
-                    },
-                    icon: Icon(Icons.edit_location),
-                    label: Text('edit location'),
-                  ),
-                  //THIS IS WHEREE THE TABLE THINGY TYPED WILL GO hhhhhhhh
-                  RaisedButton(
-                    padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                    color: Colors.black,
-                    textColor: Colors.white,
-                    shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0)),
-                    onPressed: () {
-                      Navigator.push(context, new MaterialPageRoute(
-                          builder: (context)=>
-                          new Add())
-                      );
 
-                    },
-                    child: Text("Add New Student",
-                        style: TextStyle(fontSize:20 )
-                    ),
-                  ),
+
+
+
+
+
+
+
+
+
+                ],
+
+
+
+              ),
+              Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+
+
+                children: <Widget>[
+
+
+
                            Text("Student's Enrolled",
 
                       style: TextStyle(
@@ -81,6 +138,10 @@ class _LoginState extends State<Login> {
                   ),
 
 
+                  Divider(
+                    thickness: 20,
+                    color: Colors.black,
+                  ),
 
 
 

@@ -5,9 +5,9 @@ class Table extends DataRow {
 
   GetStudent getStudent =GetStudent();
 
-  List<String> name=[];
-  List<String> age=[];
-  List<String> year=[];
+  String name='';
+  String age='';
+  String year='';
 
   Table();
 

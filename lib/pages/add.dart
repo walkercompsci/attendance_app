@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:attendance_app/services/addStudent';
 import 'package:attendance_app/services/textGet.dart';
 import 'package:attendance_app/services/getStudent.dart';
+import 'package:attendance_app/services/student.dart';
 
 
 class Add extends StatefulWidget {
@@ -92,7 +93,8 @@ class _AddState extends State<Add> {
                       color: Colors.black,
                       textColor: Colors.white,
                       shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0)),
-                      onPressed:(){
+                      onPressed:() async{
+                        await getStudent.getStudent();
                         Navigator.push(context, new MaterialPageRoute(
                             builder: (context) =>
                             new Login()

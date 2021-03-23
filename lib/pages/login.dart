@@ -21,76 +21,89 @@ class _LoginState extends State<Login> {
         body: SafeArea(
 
 
-         child:Row(
+         child:Column(
             children: <Widget>[
+            Row(
+                children: <Widget>[
 
-              SizedBox(
-                width:100,
-                height:100,
-                child: Image.network('https://adulteducation.warren.k12.in.us/assets/apptegy_cms/themes/msdwarrenin/logo2_walker-career-center-474c503d28817c64d51e08d37b1a75aa.png',
+                  SizedBox(
+                    width:100,
+                    height:100,
+                    child: Image.network('https://adulteducation.warren.k12.in.us/assets/apptegy_cms/themes/msdwarrenin/logo2_walker-career-center-474c503d28817c64d51e08d37b1a75aa.png',
 
-                  width:100,
-                  height:100,
+                      width:100,
+                      height:100,
 
-                ),
+                    ),
 
-              ),
-
-
-              Text("Club Attendance App",
-
-                style: TextStyle(
-                  fontSize: 40,
-                  decoration: TextDecoration.underline,
-
-                ),
-
-
-              ),
-              RaisedButton.icon(
-
-                padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
-                color:Colors.green,
-                textColor: Colors.white,
-                shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(5.0)),
-                onPressed:(){
-                  Navigator.push(context, new MaterialPageRoute(
-                      builder: (context)=>
-                      new AddNewStudent())
-                  );
-                },
-
-                label: Text('Find a Student',
-                  style: TextStyle(
-                    fontSize: 20,
                   ),
-                ),
-                icon: Icon(Icons.account_circle_outlined),
-              ),
 
 
-              RaisedButton.icon(
-                padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
-                color: Colors.black,
-                textColor: Colors.white,
-                shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(5.0)),
-                onPressed: () {
-                  Navigator.push(context, new MaterialPageRoute(
-                      builder: (context)=>
-                      new Add())
-                  );
+                  Text("Club Attendance App",
 
-                },
+                    style: TextStyle(
+                      fontSize: 40,
+                      decoration: TextDecoration.underline,
+
+                    ),
 
 
-                label: Text('Find a Student',
-                  style: TextStyle(
-                    fontSize: 20,
                   ),
-                ),
-                icon: Icon(Icons.search),
-              ),
+                  RaisedButton.icon(
 
+                    padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                    color:Colors.green,
+                    textColor: Colors.white,
+                    shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(5.0)),
+                    onPressed:(){
+                      Navigator.push(context, new MaterialPageRoute(
+                          builder: (context)=>
+                          new AddNewStudent())
+                      );
+                    },
+
+                    label: Text('Find a Student',
+                      style: TextStyle(
+                        fontSize: 20,
+                      ),
+                    ),
+                    icon: Icon(Icons.account_circle_outlined),
+                  ),
+
+
+                  RaisedButton.icon(
+                    padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                    color: Colors.black,
+                    textColor: Colors.white,
+                    shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(5.0)),
+                    onPressed: () {
+                      Navigator.push(context, new MaterialPageRoute(
+                          builder: (context)=>
+                          new Add())
+                      );
+
+                    },
+
+
+                    label: Text('Find a Student',
+                      style: TextStyle(
+                        fontSize: 20,
+                      ),
+                    ),
+                    icon: Icon(Icons.search),
+                  ),
+
+
+
+                ],
+            ),
+
+              Expanded(
+                child: Divider(
+                  thickness: 10,
+                  color: Colors.black,
+                ),
+              ) ,
 
 
 
@@ -127,7 +140,6 @@ class _LoginState extends State<Login> {
 
                       style: TextStyle(
                           fontSize: 50,
-                        decoration: TextDecoration.underline,
 
                       ),
 
@@ -135,10 +147,8 @@ class _LoginState extends State<Login> {
                   ),
 
 
-                  Divider(
-                    thickness: 20,
-                    color: Colors.black,
-                  ),
+
+
 
 
 

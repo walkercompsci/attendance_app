@@ -1,9 +1,9 @@
+
 import 'dart:ui';
+
 import 'package:attendance_app/pages/add.dart';
 import 'package:attendance_app/pages/teachersearch.dart';
 import 'package:flutter/material.dart';
-import 'package:attendance_app/services/studentDataSource.dart';
-import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
 
 class Login extends StatefulWidget {
@@ -13,9 +13,6 @@ class Login extends StatefulWidget {
 
 class _LoginState extends State<Login> {
   @override
-  StudentDataSource _studentDataSource = StudentDataSource();
-
-
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
@@ -143,14 +140,159 @@ class _LoginState extends State<Login> {
                     color: Colors.black,
                   ),
 
-                  SfDataGrid(
-                      source: _studentDataSource,
-                      columns: [
-                        GridTextColumn(mappingName: 'name',headerText: 'Name'),
-                        GridTextColumn(mappingName: 'age',headerText: 'Age'),
-                        GridTextColumn(mappingName: 'year',headerText: 'Graduation Year'),
-                      ]
-                  ),
+
+
+                  DataTable(
+
+                    columns: [
+
+                      DataColumn(
+                          label:Text('Name',
+                        style: TextStyle(
+                            decoration: TextDecoration.underline,
+                            fontSize: 25,
+                        ),
+                      ) ),
+                      DataColumn(label:Text('Graduation Year',
+                        style: TextStyle(
+                            fontSize: 25,
+                          decoration: TextDecoration.underline,
+                      ),
+                      ) ),
+                      DataColumn(label:Text('Club Hours',
+                        style: TextStyle(
+                          fontSize: 25,
+                          decoration: TextDecoration.underline,
+                        ),
+                      ) ),
+                    ],
+                    rows: [
+                      DataRow(
+                          color: MaterialStateProperty.resolveWith<Color>(
+                                  (Set<MaterialState> states) {
+                                return Colors.white30;
+                              }),
+                          cells: [
+                            DataCell(Text('Poggers',
+
+                              style: TextStyle(
+                                fontSize: 25,
+
+                              ),
+                            ) ),
+                            DataCell(Text('2021',
+                              style: TextStyle(
+                                fontSize: 25,
+
+                              ),
+                            ) ),
+                            DataCell(Text('69',
+                              style: TextStyle(
+                                fontSize: 25,
+
+                              ),
+                            ) ),
+
+                          ]),
+                      DataRow(
+                          color: MaterialStateProperty.resolveWith<Color>(
+                                  (Set<MaterialState> states) {
+                                return Colors.white30;
+                              }),
+                          cells: [
+                            DataCell(Text('yehaw',
+                              style: TextStyle(
+                              fontSize: 25,
+                                color:Colors.red,
+                              ),
+                              ) ),
+
+                            DataCell(Text('2025',
+                              style: TextStyle(
+                                fontSize: 25,
+                                color:Colors.red,
+                              ),
+                            ) ),
+
+                            DataCell(Text('69',
+                              style: TextStyle(
+                                fontSize: 25,
+                                color:Colors.red,
+                              ),
+                            ) ),
+
+                          ]),
+                      DataRow(
+                          color: MaterialStateProperty.resolveWith<Color>(
+                                  (Set<MaterialState> states) {
+                                return Colors.white30;
+                              }),
+                          cells: [
+                            DataCell(Text('painbot',
+                              style: TextStyle(
+                                fontSize: 25,
+                              ),
+                            ) ),
+                            DataCell(Text('2054',
+                              style: TextStyle(
+                                fontSize: 25,
+                              ),
+                            ) ),
+                            DataCell(Text('69',style: TextStyle(
+                              fontSize: 25,
+                            ),
+                            ) ),
+
+                          ]),
+                      DataRow(
+                          color: MaterialStateProperty.resolveWith<Color>(
+                                  (Set<MaterialState> states) {
+                                return Colors.white30;
+                              }),
+                          cells: [
+                            DataCell(Text('painbot',
+                              style: TextStyle(
+                                fontSize: 25,
+                                color:Colors.red,
+                              ),
+                            ) ),
+                            DataCell(Text('2054',
+                              style: TextStyle(
+                                fontSize: 25,
+                                color:Colors.red,
+                              ),
+                            ) ),
+                            DataCell(Text('69',style: TextStyle(
+                              fontSize: 25,
+                              color:Colors.red,
+                            ),
+                            ) ),
+
+                          ]),
+                      DataRow(
+                          color: MaterialStateProperty.resolveWith<Color>(
+                                  (Set<MaterialState> states) {
+                                return Colors.white30;
+                              }),
+                          cells: [
+                            DataCell(Text('painbot',
+                              style: TextStyle(
+                                fontSize: 25,
+                              ),
+                            ) ),
+                            DataCell(Text('2054',
+                              style: TextStyle(
+                                fontSize: 25,
+                              ),
+                            ) ),
+                            DataCell(Text('69',style: TextStyle(
+                              fontSize: 25,
+                            ),
+                            ) ),
+
+                          ]),
+                    ],
+                  )
 
 
                 ],

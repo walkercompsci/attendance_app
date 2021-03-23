@@ -5,9 +5,7 @@ import 'package:attendance_app/services/student.dart';
 
 class GetStudent{
 
-  List<String> name=[];
-  List<String> age=[];
-  List<String> year=[];
+  int iteration=0;
   Student student;
 
   GetStudent();
@@ -18,21 +16,10 @@ class GetStudent{
         .get()
         .then((QuerySnapshot querySnapshot)=>{
           querySnapshot.docs.forEach((doc){
+            print(iteration);
             student.addStudent(doc['full_name'],doc['age'],doc['year']);
+            iteration++;
           })
     });
   }
-
-  List getNames(){
-    return name;
-  }
-
-  List getAges(){
-    return age;
-  }
-
-  List getYears(){
-    return year;
-  }
-
 }

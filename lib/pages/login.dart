@@ -16,7 +16,7 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
-        backgroundColor: Colors.orangeAccent,
+        backgroundColor: Colors.grey,
 
         body: SafeArea(
 
@@ -27,17 +27,18 @@ class _LoginState extends State<Login> {
                 children: <Widget>[
 
                   SizedBox(
-                    width:100,
-                    height:100,
-                    child: Image.network('https://adulteducation.warren.k12.in.us/assets/apptegy_cms/themes/msdwarrenin/logo2_walker-career-center-474c503d28817c64d51e08d37b1a75aa.png',
-
-                      width:100,
-                      height:100,
-
+                    width: 50,
+                    height: 100,
+                  ),
+                    Image.network('https://adulteducation.warren.k12.in.us/assets/apptegy_cms/themes/msdwarrenin/logo2_walker-career-center-474c503d28817c64d51e08d37b1a75aa.png',
+                      width:75,
+                      height:75,
                     ),
 
-                  ),
-
+                SizedBox(
+                  width: 10,
+                  height: 100,
+                ),
 
                   Text("Club Attendance App",
 
@@ -46,12 +47,14 @@ class _LoginState extends State<Login> {
                       decoration: TextDecoration.underline,
 
                     ),
-
-
+                  ),
+                  SizedBox(
+                    width: 640,
+                    height: 100,
                   ),
                   RaisedButton.icon(
-
                     padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+
                     color:Colors.green,
                     textColor: Colors.white,
                     shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(5.0)),
@@ -69,7 +72,10 @@ class _LoginState extends State<Login> {
                     ),
                     icon: Icon(Icons.account_circle_outlined),
                   ),
-
+                  SizedBox(
+                    width: 10,
+                    height: 100,
+                  ),
 
                   RaisedButton.icon(
                     padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
@@ -97,16 +103,21 @@ class _LoginState extends State<Login> {
 
                 ],
             ),
-
+              Row(
+                children: <Widget>[
               Expanded(
                 child: Divider(
+
                   thickness: 10,
-                  color: Colors.black,
+                  height: 1,
+                  indent: 30,
+                  endIndent: 30,
+                  color: Colors.black45,
                 ),
               ) ,
 
-
-
+            ],
+        ),
               Column(
 
                 children: <Widget>[

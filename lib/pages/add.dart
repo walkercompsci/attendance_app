@@ -20,6 +20,7 @@ class _AddState extends State<Add> {
   String year;
 
   GetStudent getStudent=GetStudent();
+  Student student;
 
   final AddStudent _addStudent = AddStudent();
   TextGet nameGet=TextGet();
@@ -124,6 +125,7 @@ class _AddState extends State<Add> {
                       shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0)),
                       onPressed:() async{
                         await getStudent.getStudent();
+                        print(student.getAllStudents());
                       },
                       label: Text('Get student'),
                       icon: Icon(Icons.add),

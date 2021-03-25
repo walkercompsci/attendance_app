@@ -3,7 +3,9 @@ import 'dart:ui';
 
 import 'package:attendance_app/pages/add.dart';
 import 'package:attendance_app/pages/teachersearch.dart';
+import 'package:attendance_app/services/studentDataSource.dart';
 import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
 
 class Login extends StatefulWidget {
@@ -12,6 +14,9 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+
+  StudentDataSource studentDataSource=StudentDataSource();
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -146,13 +151,22 @@ class _LoginState extends State<Login> {
 
                   ),
 
+                  SfDataGrid(
+                      source: studentDataSource,
+                      columns: [
+                        GridTextColumn(mappingName: 'name', headerText: 'Name'),
+                        GridTextColumn(mappingName: 'age', headerText: 'Age'),
+                        GridTextColumn(mappingName: 'year', headerText: 'Graduation year'),
+                      ],
+                  ),
 
 
 
 
 
 
-                  DataTable(
+
+                  /*DataTable(
 
                     columns: [
 
@@ -302,7 +316,7 @@ class _LoginState extends State<Login> {
 
                           ]),
                     ],
-                  )
+                  )*/
 
 
                 ],

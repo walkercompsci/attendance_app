@@ -10,13 +10,16 @@ class Student{
     students.add(Student(this.name,this.year,this.age));
   }
 
-  Student returnAllStudents(){
+  Student getAllStudents(){
     for(int i=0; i<students.length;i++){
       return students.elementAt(i);
     }
   }
 
-  List returnStudents(){
+  List getStudents(){
       return students;
   }
+
+
+
 }

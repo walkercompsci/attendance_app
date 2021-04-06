@@ -6,11 +6,8 @@ class StudentDataSource extends DataGridSource<Student>{
 
   Student student;
 
-  final List<Student> _student = <Student>[];
+  List<Student> list;
 
-  /*StudentDataSource(){
-    setVar();
-  }*/
 
   @override
   List<Student> get dataSource => student.getStudents();

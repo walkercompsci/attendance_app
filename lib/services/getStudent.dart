@@ -7,6 +7,7 @@ class GetStudent{
 
   int iteration=0;
   Student student;
+  List<Student> list;
 
   GetStudent();
 
@@ -16,10 +17,12 @@ class GetStudent{
         .get()
         .then((QuerySnapshot querySnapshot)=>{
           querySnapshot.docs.forEach((doc){
-            print(iteration);
-            student.addStudent(doc['full_name'],doc['age'],doc['year']);
+            //student.addStudent(doc['full_name'],doc['age'],doc['year']);
+            list.add(Student(doc['full_name'],doc['age'],doc['year']));
+            print(doc['full_name']+" "+doc['age']+" "+doc['year']);
             iteration++;
           })
     });
+    student.setStudents(list);
   }
 }

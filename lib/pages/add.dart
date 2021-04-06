@@ -31,18 +31,111 @@ class _AddState extends State<Add> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.grey,
       appBar: AppBar(
         title: Text('Add Student '),
         centerTitle: true,
         backgroundColor: Colors.green,
       ),
       body: SafeArea(
-        child:Row(
+        child:Column(
           children: <Widget>[
+            Row(
+              children: <Widget>[
+
+                SizedBox(
+                  width: 50,
+                  height: 100,
+                ),
+                Image.network('https://adulteducation.warren.k12.in.us/assets/apptegy_cms/themes/msdwarrenin/logo2_walker-career-center-474c503d28817c64d51e08d37b1a75aa.png',
+                  width:75,
+                  height:75,
+                ),
+
+                SizedBox(
+                  width: 10,
+                  height: 100,
+                ),
+
+                Text("Club Attendance App",
+
+                  style: TextStyle(
+                    fontSize: 40,
+                    decoration: TextDecoration.underline,
+
+                  ),
+                ),
+                SizedBox(
+                  width: 640,
+                  height: 100,
+                ),
+                RaisedButton.icon(
+                  padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+
+                  color:Colors.green,
+                  textColor: Colors.white,
+                  shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(5.0)),
+                  onPressed: () => {},
+                  label: Text('Find a Student',
+                    style: TextStyle(
+                      fontSize: 20,
+                    ),
+                  ),
+                  icon: Icon(Icons.account_circle_outlined),
+                ),
+
+                SizedBox(
+                  width: 10,
+                  height: 100,
+                ),
+
+                RaisedButton.icon(
+                  padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                  color: Colors.black,
+                  textColor: Colors.white,
+                  shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(5.0)),
+                  onPressed: () => {},
+                  label: Text('Find a Student',
+                    style: TextStyle(
+                      fontSize: 20,
+                    ),
+                  ),
+                  icon: Icon(Icons.search),
+                ),
+              ],
+            ),
+            Row(
+              children: <Widget>[
+                Expanded(
+                  child: Divider(
+
+                    thickness: 10,
+                    height: 1,
+                    indent: 30,
+                    endIndent: 30,
+                    color: Colors.black45,
+                  ),
+                ) ,
+
+              ],
+            ),
             Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
+                Text("New Students Information",
+
+                  style: TextStyle(
+                    fontSize: 50,
+                    decoration: TextDecoration.underline,
+
+                  ),
+
+
+                ),
+                SizedBox(
+                  width: 10,
+                  height: 10,
+                ),
                 Container(
                   width:250.0,
                   child:TextField(
@@ -56,6 +149,10 @@ class _AddState extends State<Add> {
                     ),
                   ),
                 ),
+                SizedBox(
+                  width: 10,
+                  height: 10,
+                ),
                 Container(
                   width:250.0,
                   child:TextField(
@@ -68,6 +165,10 @@ class _AddState extends State<Add> {
                         hintText: 'Enter Age'
                     ),
                   ),
+                ),
+                SizedBox(
+                  width: 10,
+                  height: 10,
                 ),
                 Container(
                   width:250.0,
@@ -91,9 +192,10 @@ class _AddState extends State<Add> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     FlatButton.icon(
+                      padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
                       color: Colors.black,
                       textColor: Colors.white,
-                      shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0)),
+                      shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(5.0)),
                       onPressed:() async{
                         await getStudent.getStudent();
                         Navigator.push(context, new MaterialPageRoute(
@@ -101,15 +203,16 @@ class _AddState extends State<Add> {
                             new Login()
                         ));
                       },
-                      label: Text('This button leads somewhere else'),
+                      label: Text('Student Table'),
                       icon: Icon(Icons.add),
                     ),
 
 
                     FlatButton.icon(
+                      padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
                       color: Colors.black,
                       textColor: Colors.white,
-                      shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0)),
+                      shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(5.0)),
                       onPressed:() async{
                         name=nameGet.text;
                         age= ageGet.text;
@@ -120,9 +223,10 @@ class _AddState extends State<Add> {
                       icon: Icon(Icons.add),
                     ),
                     FlatButton.icon(
+                      padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
                       color: Colors.black,
                       textColor: Colors.white,
-                      shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0)),
+                      shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(5.0)),
                       onPressed:() async{
                         await getStudent.getStudent();
                       },

@@ -165,9 +165,30 @@ class _LoginState extends State<Login> {
                   SfDataGrid(
                       source: studentDataSource,
                       columns: [
-                        GridTextColumn(mappingName: 'name', headerText: 'Name'),
-                        GridTextColumn(mappingName: 'age', headerText: 'Age'),
-                        GridTextColumn(mappingName: 'year', headerText: 'Graduation year'),
+                        GridTextColumn(
+                            columnName: 'name',
+                            label:Container(
+                              padding: EdgeInsets.symmetric(horizontal: 16.0),
+                              alignment: Alignment.centerRight,
+                              child: Text('Name'),
+                            ),
+                        ),
+                        GridTextColumn(
+                          columnName: 'age',
+                          label:Container(
+                            padding: EdgeInsets.symmetric(horizontal: 16.0),
+                            alignment: Alignment.centerRight,
+                            child: Text('Age'),
+                          ),
+                        ),
+                        GridTextColumn(
+                          columnName: 'year',
+                          label:Container(
+                            padding: EdgeInsets.symmetric(horizontal: 16.0),
+                            alignment: Alignment.centerRight,
+                            child: Text('Gradution Year'),
+                          ),
+                        ),
                       ],
                   ),
 

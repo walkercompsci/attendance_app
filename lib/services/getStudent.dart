@@ -19,10 +19,10 @@ class GetStudent{
           querySnapshot.docs.forEach((doc){
             //student.addStudent(doc['full_name'],doc['age'],doc['year']);
             list.add(Student(doc['full_name'],doc['age'],doc['year']));
+            student.addStudent(doc['full_name'],doc['age'],doc['year']);
             print(doc['full_name']+" "+doc['age']+" "+doc['year']);
             iteration++;
           })
     });
-    student.setStudents(list);
   }
 }

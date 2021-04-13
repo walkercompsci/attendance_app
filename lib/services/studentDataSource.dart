@@ -3,7 +3,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 import 'package:attendance_app/services/getStudent.dart';
 import 'package:flutter/material.dart';
 
-class StudentDataSource extends DataGridSource{
+/*class StudentDataSource extends DataGridSource{
 
   List<DataGridRow> dataGridRows=[];
 
@@ -36,7 +36,7 @@ class StudentDataSource extends DataGridSource{
                 overflow: TextOverflow.ellipsis,
               ));
         }).toList());
-  }
+  }*/
 
   /*void setVar(){
     for(int i=0;i<student.getStudents().length;i++){
@@ -45,4 +45,4 @@ class StudentDataSource extends DataGridSource{
       }
     }
   }*/
-}
+//}

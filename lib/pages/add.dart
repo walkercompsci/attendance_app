@@ -197,7 +197,7 @@ class _AddState extends State<Add> {
                       textColor: Colors.white,
                       shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(5.0)),
                       onPressed:() async{
-                        await getStudent.getStudent();
+                        //await getStudent.getStudent();
                         Navigator.push(context, new MaterialPageRoute(
                             builder: (context) =>
                             new Login()

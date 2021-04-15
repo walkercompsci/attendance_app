@@ -69,14 +69,20 @@ class _AddState extends State<Add> {
                   width: 640,
                   height: 100,
                 ),
+
                 RaisedButton.icon(
                   padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
-
-                  color:Colors.green,
+                  color: Colors.green,
                   textColor: Colors.white,
                   shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(5.0)),
-                  onPressed: () => {},
-                  label: Text('Find a Student',
+                  onPressed:() async{
+                    //await getStudent.getStudent();
+                    Navigator.push(context, new MaterialPageRoute(
+                        builder: (context) =>
+                        new Login()
+                    ));
+                  },
+                  label: Text('Table of Students',
                     style: TextStyle(
                       fontSize: 20,
                     ),
@@ -183,56 +189,76 @@ class _AddState extends State<Add> {
                     ),
                   ),
                 ),
+
               ]
             ),
+      Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            SizedBox(
+              width: 10,
+              height: 100,
+            ),
+            Expanded(
+              child: Divider(
+
+                thickness: 10,
+                height: 1,
+                indent: 30,
+                endIndent: 30,
+                color: Colors.black45,
+              ),
+            ) ,
+
+          ]
+      ),
+      Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+
+
+
+          RaisedButton.icon(
+            padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+            color: Colors.black,
+            textColor: Colors.white,
+            shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(5.0)),
+            onPressed:() async{
+              name=nameGet.text;
+              age= ageGet.text;
+              year= yearGet.text;
+              await _addStudent.addStudent(name,age,year);
+            },
+            label: Text('Add student'),
+            icon: Icon(Icons.add),
+          ),
+          RaisedButton.icon(
+            padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+            color: Colors.black,
+            textColor: Colors.white,
+            shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(5.0)),
+            onPressed:() async{
+              name=nameGet.text;
+              age= ageGet.text;
+              year= yearGet.text;
+              await _addStudent.addStudent(name,age,year);
+            },
+            label: Text('Add student'),
+            icon: Icon(Icons.add),
+          ),
+        ]
+      ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    FlatButton.icon(
-                      padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
-                      color: Colors.black,
-                      textColor: Colors.white,
-                      shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(5.0)),
-                      onPressed:() async{
-                        //await getStudent.getStudent();
-                        Navigator.push(context, new MaterialPageRoute(
-                            builder: (context) =>
-                            new Login()
-                        ));
-                      },
-                      label: Text('Student Table'),
-                      icon: Icon(Icons.add),
-                    ),
 
 
-                    FlatButton.icon(
-                      padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
-                      color: Colors.black,
-                      textColor: Colors.white,
-                      shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(5.0)),
-                      onPressed:() async{
-                        name=nameGet.text;
-                        age= ageGet.text;
-                        year= yearGet.text;
-                        await _addStudent.addStudent(name,age,year);
-                      },
-                      label: Text('Add student'),
-                      icon: Icon(Icons.add),
-                    ),
-                    FlatButton.icon(
-                      padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
-                      color: Colors.black,
-                      textColor: Colors.white,
-                      shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(5.0)),
-                      onPressed:() async{
-                        await getStudent.getStudent();
-                      },
-                      label: Text('Get student'),
-                      icon: Icon(Icons.add),
-                    ),
+
+
+
                   ],
                 ),
               ]

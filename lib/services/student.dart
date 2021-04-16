@@ -7,8 +7,8 @@ class Student{
   List<Student> students;
 
 
-  void addStudent(name,age,year) async{
-    await students.add(Student(this.name,this.year,this.age));
+  addStudent(name,age,year){
+    students.add(Student(this.name,this.year,this.age));
   }
 
   void getAllStudents(List<Student> list){

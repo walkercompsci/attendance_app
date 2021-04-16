@@ -120,48 +120,25 @@ class _LoginState extends State<Login> {
                   color: Colors.black45,
                 ),
               ) ,
-
             ],
         ),
               Column(
-
                 children: <Widget>[
-
-
-
-
-
-
-
-
-
-
-
-
 
                 ],
-
-
-
               ),
               Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-
+                mainAxisAlignment: MainAxisAlignment.center,
 
                 children: <Widget>[
 
+                  Text("Student's Enrolled",
+                    style: TextStyle(fontSize: 50),
+                  ),
 
-
-                           Text("Student's Enrolled",
-
-                      style: TextStyle(
-                          fontSize: 50,
-
-                      ),
-
-/*SfDataGrid(
-                      source: studentDataSource,
-                      columns: [
+                  /*SfDataGrid(
+                    source: studentDataSource,
+                    columns: [
                         GridTextColumn(
                             columnName: 'name',
                             label:Container(
@@ -188,7 +165,7 @@ class _LoginState extends State<Login> {
                         ),
                       ],
                   ),*/
-                  ),
+
 
 
 
@@ -223,11 +200,11 @@ class _LoginState extends State<Login> {
                       ) ),
                     ],
                     rows: [
-                      DataRow(
-                          color: MaterialStateProperty.resolveWith<Color>(
+                      DataRow(color: MaterialStateProperty.resolveWith<Color>(
                                   (Set<MaterialState> states) {
                                 return Colors.white30;
                               }),
+
                           cells: [
                             DataCell(Text('Poggers',
 

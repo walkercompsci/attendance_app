@@ -36,13 +36,13 @@ import 'package:flutter/material.dart';
                 overflow: TextOverflow.ellipsis,
               ));
         }).toList());
-  }*/
+  }
 
-  /*void setVar(){
+  void setVar(){
     for(int i=0;i<student.getStudents().length;i++){
       if(_student.elementAt(i)!=student.getStudents().elementAt(i)){
         _student.add(student.getStudents().elementAt(i));
       }
     }
-  }*/
-//}
+  }
+}*/

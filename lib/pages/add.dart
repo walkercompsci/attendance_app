@@ -238,12 +238,9 @@ class _AddState extends State<Add> {
             textColor: Colors.white,
             shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(5.0)),
             onPressed:() async{
-              name=nameGet.text;
-              age= ageGet.text;
-              year= yearGet.text;
-              await _addStudent.addStudent(name,age,year);
+              await getStudent.getStudent();
             },
-            label: Text('Add student'),
+            label: Text('Get student'),
             icon: Icon(Icons.add),
           ),
         ]

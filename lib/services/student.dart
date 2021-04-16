@@ -4,7 +4,7 @@ class Student{
   final String name;
   final String age;
   final String year;
-  List<Student> students;
+  List<Student> students=[];
 
 
   addStudent(name,age,year){

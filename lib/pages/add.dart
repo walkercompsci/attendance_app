@@ -26,6 +26,7 @@ class _AddState extends State<Add> {
   TextGet nameGet=TextGet();
   TextGet ageGet=TextGet();
   TextGet yearGet=TextGet();
+  List<Student> list=[];
 
   @override
 
@@ -76,7 +77,7 @@ class _AddState extends State<Add> {
                   textColor: Colors.white,
                   shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(5.0)),
                   onPressed:() async{
-                    //await getStudent.getStudent();
+                    await getStudent.getStudent();
                     Navigator.push(context, new MaterialPageRoute(
                         builder: (context) =>
                         new Login()
@@ -265,6 +266,10 @@ class _AddState extends State<Add> {
         ),
       ),
     );
+  }
+
+  List getList(){
+    return list;
   }
 }
 

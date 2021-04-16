@@ -6,8 +6,7 @@ import 'package:attendance_app/services/student.dart';
 class GetStudent{
 
   int iteration=0;
-  Student student;
-  List<Student> list;
+  List<Student> list=[];
 
   GetStudent();
 
@@ -19,10 +18,15 @@ class GetStudent{
           querySnapshot.docs.forEach((doc){
             //student.addStudent(doc['full_name'],doc['age'],doc['year']);
             list.add(Student(doc['full_name'],doc['age'],doc['year']));
-            student.addStudent(doc['full_name'],doc['age'],doc['year']);
+            //list.add(doc['full_name']);
+            //student.addStudent(doc['full_name'],doc['age'],doc['year']);
             print(doc['full_name']+" "+doc['age']+" "+doc['year']);
             iteration++;
           })
     });
+  }
+
+  List getList(){
+    return list;
   }
 }

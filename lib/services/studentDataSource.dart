@@ -3,11 +3,14 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 import 'package:attendance_app/services/getStudent.dart';
 import 'package:flutter/material.dart';
 
-/*class StudentDataSource extends DataGridSource{
+class StudentDataSource extends DataGridSource{
 
   List<DataGridRow> dataGridRows=[];
+  GetStudent getStudents=GetStudent();
+  List<Student> students=[];
 
-  StudentDataSource(List<Student> students){
+  StudentDataSource(){
+    students=getStudents.getList();
     dataGridRows = students
         .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
       DataGridCell<String>(columnName: 'name', value: dataGridRow.name),
@@ -37,12 +40,4 @@ import 'package:flutter/material.dart';
               ));
         }).toList());
   }
-
-  void setVar(){
-    for(int i=0;i<student.getStudents().length;i++){
-      if(_student.elementAt(i)!=student.getStudents().elementAt(i)){
-        _student.add(student.getStudents().elementAt(i));
-      }
-    }
-  }
-}*/
+}

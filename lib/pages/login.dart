@@ -1,6 +1,6 @@
 
 import 'dart:ui';
-
+import 'package:attendance_app/services/getStudent.dart';
 import 'package:attendance_app/pages/add.dart';
 import 'package:attendance_app/pages/teachersearch.dart';
 import 'package:attendance_app/services/studentDataSource.dart';
@@ -15,7 +15,9 @@ class Login extends StatefulWidget {
 
 class _LoginState extends State<Login> {
 
-  //StudentDataSource studentDataSource=StudentDataSource();
+  GetStudent getStudent=GetStudent();
+
+  StudentDataSource studentDataSource;
 
   @override
   Widget build(BuildContext context) {

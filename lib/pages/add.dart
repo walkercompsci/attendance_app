@@ -32,11 +32,6 @@ class _AddState extends State<Add> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey,
-      appBar: AppBar(
-        title: Text('Add Student '),
-        centerTitle: true,
-        backgroundColor: Colors.green,
-      ),
       body: SafeArea(
         child:Column(
           children: <Widget>[
@@ -197,15 +192,15 @@ class _AddState extends State<Add> {
           children: <Widget>[
             SizedBox(
               width: 10,
-              height: 100,
+              height: 50,
             ),
             Expanded(
               child: Divider(
 
                 thickness: 10,
                 height: 1,
-                indent: 30,
-                endIndent: 30,
+                indent: 580,
+                endIndent: 580,
                 color: Colors.black45,
               ),
             ) ,
@@ -232,6 +227,10 @@ class _AddState extends State<Add> {
             label: Text('Add student'),
             icon: Icon(Icons.add),
           ),
+          SizedBox(
+            width: 10,
+            height: 100,
+          ),
           RaisedButton.icon(
             padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
             color: Colors.black,
@@ -241,7 +240,7 @@ class _AddState extends State<Add> {
               await getStudent.getStudent();
             },
             label: Text('Get student'),
-            icon: Icon(Icons.add),
+            icon: Icon(Icons.search),
           ),
         ]
       ),

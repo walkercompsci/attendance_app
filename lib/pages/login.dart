@@ -70,12 +70,12 @@ class _LoginState extends State<Login> {
                       );
                     },
 
-                    label: Text('Find a Student',
+                    label: Text('Student Search',
                       style: TextStyle(
                         fontSize: 20,
                       ),
                     ),
-                    icon: Icon(Icons.account_circle_outlined),
+                    icon: Icon(Icons.search_outlined),
                   ),
                   SizedBox(
                     width: 10,
@@ -96,12 +96,12 @@ class _LoginState extends State<Login> {
                     },
 
 
-                    label: Text('Find a Student',
+                    label: Text('Add student',
                       style: TextStyle(
                         fontSize: 20,
                       ),
                     ),
-                    icon: Icon(Icons.search),
+                    icon: Icon(Icons.add),
                   ),
 
 

@@ -12,28 +12,99 @@ class _AddNewStudentState extends State<AddNewStudent> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(backgroundColor: Colors.white,
-      appBar: AppBar(
-        title: Text('Student Search'),
-        centerTitle: true,
-        backgroundColor: Colors.black,
-      ),
       body: SafeArea(
         child: Column(
            children: <Widget>[
-            FlatButton.icon(
-              color: Colors.black,
-              textColor: Colors.white,
-              shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0)),
-              onPressed:() {
-                Navigator.push(context, new MaterialPageRoute(
-                  builder: (context) =>
-                    new Add()
-                ));
-              },
-              icon: Icon(Icons.add),
-              label: Text('Add New Student'),
-        ),
+             Row(
+               children: <Widget>[
 
+                 SizedBox(
+                   width: 50,
+                   height: 100,
+                 ),
+                 Image.network('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu_fHm5WbDTFvrKoJG4eeY8BtC9WjWfl6eentQ45834EE6x40pc-OF7DzWwzD0DJOu-aNQ9IKnNVZy3ZW4HQ:https://d.newsweek.com/en/full/1191074/pain-headache.jpg&usqp=CAU',
+                   width:75,
+                   height:75,
+                 ),
+
+                 SizedBox(
+                   width: 10,
+                   height: 100,
+                 ),
+
+                 Text("Club Attendance App",
+
+                   style: TextStyle(
+                     fontSize: 40,
+                     decoration: TextDecoration.underline,
+
+                   ),
+                 ),
+                 SizedBox(
+                   width: 640,
+                   height: 100,
+                 ),
+
+                 RaisedButton.icon(
+                   padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                   color: Colors.green,
+                   textColor: Colors.white,
+                   shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(5.0)),
+                   onPressed:() async{
+                     //await getStudent.getStudent();
+                     Navigator.push(context, new MaterialPageRoute(
+                         builder: (context) =>
+                         new Login()
+                     ));
+                   },
+                   label: Text('Table of Students',
+                     style: TextStyle(
+                       fontSize: 20,
+                     ),
+                   ),
+                   icon: Icon(Icons.account_circle_outlined),
+                 ),
+
+                 SizedBox(
+                   width: 10,
+                   height: 100,
+                 ),
+
+                 RaisedButton.icon(
+                   padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                   color: Colors.black,
+                   textColor: Colors.white,
+                   shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(5.0)),
+                   onPressed:() {
+                     Navigator.push(context, new MaterialPageRoute(
+                         builder: (context) =>
+                         new Login()
+                     ));
+                   },
+                   label: Text('Find a Student',
+                     style: TextStyle(
+                       fontSize: 20,
+                     ),
+                   ),
+                   icon: Icon(Icons.search),
+                 ),
+               ],
+             ),
+             Row(
+               children: <Widget>[
+                 Expanded(
+                   child: Divider(
+
+                     thickness: 10,
+                     height: 1,
+                     indent: 30,
+                     endIndent: 30,
+                     color: Colors.black45,
+                   ),
+                 ) ,
+
+               ],
+             ),
 
             FlatButton.icon(
               color: Colors.black,

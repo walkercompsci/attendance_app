@@ -135,13 +135,13 @@ class _AddNewStudentState extends State<AddNewStudent> {
     }
   }
 class TextFunction extends StatefulWidget {
-  TextFunction({Key key}) : super(key : key);
+  TextFunction({required Key key}) : super(key : key);
   @override
   _TextFunctionState createState() => _TextFunctionState();
 }
 
 class _TextFunctionState extends State<TextFunction> {
-  TextEditingController _controller;
+  TextEditingController _controller=TextEditingController();
 
   void initState() {
     super.initState();

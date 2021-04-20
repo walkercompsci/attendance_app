@@ -15,12 +15,11 @@ class Add extends StatefulWidget {
 
 class _AddState extends State<Add> {
 
-  String name;
-  String age;
-  String year;
+  String name="";
+  String age="";
+  String year="";
 
   GetStudent getStudent=GetStudent();
-  Student student;
 
   final AddStudent _addStudent = AddStudent();
   TextGet nameGet=TextGet();

@@ -26,10 +26,8 @@ class Student{
       return students;
   }
 
-  void setStudents(List list){
+  void setStudents(List<Student> list){
     students=list;
   }
-
-
 
 }

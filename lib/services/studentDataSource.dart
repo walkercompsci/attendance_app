@@ -1,4 +1,5 @@
 import 'package:attendance_app/services/student.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 import 'package:attendance_app/services/getStudent.dart';
 import 'package:flutter/material.dart';
@@ -8,9 +9,10 @@ class StudentDataSource extends DataGridSource{
   List<DataGridRow> dataGridRows=[];
   GetStudent getStudents=GetStudent();
   List<Student> students=[];
+  ListEquality equal=ListEquality();
 
   StudentDataSource(){
-    students=getStudents.getList();
+    compareList();
     dataGridRows = students
         .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
       DataGridCell<String>(columnName: 'name', value: dataGridRow.name),
@@ -40,4 +42,19 @@ class StudentDataSource extends DataGridSource{
               ));
         }).toList());
   }
+
+  void compareList(){
+    if(equal.equals(students,getStudents.getList())!=true){
+      setStudents();
+    }
+  }
+
+  void setStudents(){
+    for(int i=0;i<getStudents.getList().length;i++){
+      if(students.elementAt(i)!=getStudents.getList().elementAt(i)) {
+        students.add(getStudents.getList().elementAt(i));
+      }
+    }
+  }
+
 }

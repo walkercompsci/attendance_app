@@ -3,9 +3,10 @@ import 'dart:ui';
 import 'package:attendance_app/services/getStudent.dart';
 import 'package:attendance_app/pages/add.dart';
 import 'package:attendance_app/pages/teachersearch.dart';
+import 'package:attendance_app/services/student.dart';
 import 'package:attendance_app/services/studentDataSource.dart';
 import 'package:flutter/material.dart';
-//import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
 
 class Login extends StatefulWidget {
@@ -16,8 +17,7 @@ class Login extends StatefulWidget {
 class _LoginState extends State<Login> {
 
   GetStudent getStudent=GetStudent();
-
-  StudentDataSource studentDataSource;
+  StudentDataSource studentDataSource=StudentDataSource();
 
   @override
   Widget build(BuildContext context) {
@@ -138,7 +138,7 @@ class _LoginState extends State<Login> {
                     style: TextStyle(fontSize: 50),
                   ),
 
-                  /*SfDataGrid(
+                  SfDataGrid(
                     source: studentDataSource,
                     columns: [
                         GridTextColumn(
@@ -166,7 +166,7 @@ class _LoginState extends State<Login> {
                           ),
                         ),
                       ],
-                  ),*/
+                  ),
 
 
 
@@ -177,7 +177,7 @@ class _LoginState extends State<Login> {
 
 
 
-                  DataTable(
+                  /*DataTable(
 
                     columns: [
 
@@ -327,7 +327,7 @@ class _LoginState extends State<Login> {
 
                           ]),
                     ],
-                  )
+                  )*/
 
 
                 ],

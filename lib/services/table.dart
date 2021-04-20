@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:attendance_app/services/getStudent.dart';
 
+/*
 class Table extends DataRow {
 
   GetStudent getStudent =GetStudent();
@@ -24,3 +25,4 @@ class Table extends DataRow {
     }
   }
 
+*/

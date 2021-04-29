@@ -11,7 +11,7 @@ class AddNewStudent extends StatefulWidget {
 class _AddNewStudentState extends State<AddNewStudent> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor: Colors.white,
+    return Scaffold(backgroundColor: Colors.grey,
       body: SafeArea(
         child: Column(
            children: <Widget>[
@@ -22,9 +22,9 @@ class _AddNewStudentState extends State<AddNewStudent> {
                    width: 50,
                    height: 100,
                  ),
-                 Image.network('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu_fHm5WbDTFvrKoJG4eeY8BtC9WjWfl6eentQ45834EE6x40pc-OF7DzWwzD0DJOu-aNQ9IKnNVZy3ZW4HQ:https://d.newsweek.com/en/full/1191074/pain-headache.jpg&usqp=CAU',
-                   width:75,
-                   height:75,
+                 Image.asset('WCC.png',
+                   width:95,
+                   height:95,
                  ),
 
                  SizedBox(

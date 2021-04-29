@@ -37,10 +37,11 @@ class _LoginState extends State<Login> {
                     width: 50,
                     height: 100,
                   ),
-                    Image.network('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu_fHm5WbDTFvrKoJG4eeY8BtC9WjWfl6eentQ45834EE6x40pc-OF7DzWwzD0DJOu-aNQ9IKnNVZy3ZW4HQ:https://d.newsweek.com/en/full/1191074/pain-headache.jpg&usqp=CAU',
-                      width:75,
-                      height:75,
-                    ),
+                  Image.asset('WCC.png',
+                    width:95,
+                    height:95,
+                  ),
+
 
                 SizedBox(
                   width: 10,

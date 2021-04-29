@@ -10,14 +10,16 @@ class StudentDataSource extends DataGridSource{
   GetStudent getStudents=GetStudent();
   List<Student> students=[];
   ListEquality equal=ListEquality();
+  Student student=Student('Jim','18','2021');
 
   StudentDataSource(){
     compareList();
+    students.add(student);
     dataGridRows = students
         .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
-      DataGridCell<String>(columnName: 'name', value: dataGridRow.name),
-      DataGridCell<String>(columnName: 'age', value: dataGridRow.age),
-      DataGridCell<String>(columnName: 'year', value: dataGridRow.year),
+          DataGridCell<String>(columnName: 'name', value: dataGridRow.name),
+          DataGridCell<String>(columnName: 'age', value: dataGridRow.age),
+          DataGridCell<String>(columnName: 'year', value: dataGridRow.year),
     ]))
         .toList();
   }
@@ -31,8 +33,8 @@ class StudentDataSource extends DataGridSource{
     return DataGridRowAdapter(
         cells: row.getCells().map<Widget>((dataGridCell) {
           return Container(
-              alignment: (dataGridCell.columnName == 'id' ||
-                  dataGridCell.columnName == 'salary')
+              alignment: (dataGridCell.columnName == 'name' ||
+                  dataGridCell.columnName == 'age')
                   ? Alignment.centerRight
                   : Alignment.centerLeft,
               padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -44,15 +46,15 @@ class StudentDataSource extends DataGridSource{
   }
 
   void compareList(){
-    if(equal.equals(students,getStudents.getList())!=true){
-      setStudents();
+    if(equal.equals(students,getStudents.getTestList())!=true){
+      setStudents(getStudents.getTestList());
     }
   }
 
-  void setStudents(){
-    for(int i=0;i<getStudents.getList().length;i++){
-      if(students.elementAt(i)!=getStudents.getList().elementAt(i)) {
-        students.add(getStudents.getList().elementAt(i));
+  void setStudents(List<Student> student){
+    for(int i=0;i<student.length;i++){
+      if(students.elementAt(i)!=student.elementAt(i)) {
+        students.add(student.elementAt(i));
       }
     }
   }

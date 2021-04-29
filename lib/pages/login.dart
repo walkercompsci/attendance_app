@@ -20,7 +20,7 @@ class _LoginState extends State<Login> {
   StudentDataSource studentDataSource=StudentDataSource();
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context){
     return MaterialApp(
         home: Scaffold(
         backgroundColor: Colors.grey,

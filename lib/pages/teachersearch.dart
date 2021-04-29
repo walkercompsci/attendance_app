@@ -11,7 +11,7 @@ class AddNewStudent extends StatefulWidget {
 class _AddNewStudentState extends State<AddNewStudent> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor: Colors.white,
+    return Scaffold(backgroundColor: Colors.grey,
       body: SafeArea(
         child: Column(
            children: <Widget>[

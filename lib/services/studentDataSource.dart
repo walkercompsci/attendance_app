@@ -47,7 +47,8 @@ class StudentDataSource extends DataGridSource{
 
   void compareList(){
     if(equal.equals(students,getStudents.getTestList())!=true){
-      setStudents(getStudents.getTestList());
+      //setStudents(getStudents.getTestList());
+      students=getStudents.getTestList();
     }
   }
 

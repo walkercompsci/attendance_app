@@ -21,6 +21,7 @@ class GetStudent{
         .then((QuerySnapshot querySnapshot)=>{
           querySnapshot.docs.forEach((doc){
             list.add(Student(doc['full_name'],doc['age'],doc['year']));
+            print(iteration);
             iteration++;
           })
     });

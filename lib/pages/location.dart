@@ -8,18 +8,7 @@ class MyApp extends StatelessWidget {
 
         home: Scaffold(
 
-            appBar: AppBar(
-
-              title: const Text('Sign In To The CAA', style: TextStyle(
-                color: Colors.black,
-              ),
-
-              ),
-              actions: [
-                Icon(Icons.search),
-              ],
-              backgroundColor:Color(0xFFcf7500),
-            ),
+            
             body: Center(
                 child: GetDate()
             )

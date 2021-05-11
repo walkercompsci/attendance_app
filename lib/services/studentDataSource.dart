@@ -8,12 +8,11 @@ class StudentDataSource extends DataGridSource{
 
   List<DataGridRow> dataGridRows=[];
   GetStudent getStudents=GetStudent();
-  List<Student> students=[];
+  List<Student> students=GetStudent.list;
   ListEquality equal=ListEquality();
   Student student=Student('Jim','18','2021');
 
   StudentDataSource(){
-    compareList();
     students.add(student);
     dataGridRows = students
         .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
@@ -46,9 +45,8 @@ class StudentDataSource extends DataGridSource{
   }
 
   void compareList(){
-    if(equal.equals(students,getStudents.getTestList())!=true){
-      //setStudents(getStudents.getTestList());
-      students=getStudents.getTestList();
+    if(equal.equals(students, GetStudent.getList())!=true){
+      setStudents(GetStudent.getList());
     }
   }
 

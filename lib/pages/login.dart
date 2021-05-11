@@ -16,11 +16,12 @@ class Login extends StatefulWidget {
 
 class _LoginState extends State<Login> {
 
-  GetStudent getStudent=GetStudent();
+
   StudentDataSource studentDataSource=StudentDataSource();
 
   @override
   Widget build(BuildContext context){
+    GetStudent.getList();
     return MaterialApp(
         home: Scaffold(
         backgroundColor: Colors.grey,
@@ -168,6 +169,7 @@ class _LoginState extends State<Login> {
                         ),
                       ],
                   ),
+                  Text('Names: '),
 
 
 

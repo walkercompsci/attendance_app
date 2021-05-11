@@ -7,7 +7,7 @@ import 'package:attendance_app/services/studentDataSource.dart';
 class GetStudent{
 
   int iteration=0;
-  List<Student> list=[];
+  static List<Student> list=[];
   List<Student> testList=[];
   Student student=Student('a','a','a');
   //StudentDataSource student=StudentDataSource();
@@ -15,7 +15,7 @@ class GetStudent{
   GetStudent();
 
   Future getStudent() async{
-    FirebaseFirestore.instance
+    await FirebaseFirestore.instance
         .collection('clubs/robotics_club/students')
         .get()
         .then((QuerySnapshot querySnapshot)=>{
@@ -29,7 +29,8 @@ class GetStudent{
     //student.setStudents(list);
   }
 
-  List<Student> getList(){
+  static List<Student> getList(){
+    print('e');
     return list;
   }
 

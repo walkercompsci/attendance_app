@@ -16,12 +16,11 @@ class Login extends StatefulWidget {
 
 class _LoginState extends State<Login> {
 
-
+  GetStudent getStudent=GetStudent();
   StudentDataSource studentDataSource=StudentDataSource();
 
   @override
   Widget build(BuildContext context){
-    GetStudent.getList();
     return MaterialApp(
         home: Scaffold(
         backgroundColor: Colors.grey,
@@ -139,7 +138,14 @@ class _LoginState extends State<Login> {
                   Text("Student's Enrolled",
                     style: TextStyle(fontSize: 50),
                   ),
+                  SizedBox(
+                    width: 50,
+                    height: 50,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
 
+                    children: <Widget>[
                   SfDataGrid(
                     source: studentDataSource,
                     columns: [
@@ -169,7 +175,11 @@ class _LoginState extends State<Login> {
                         ),
                       ],
                   ),
-                  Text('Names: '),
+                    ],
+
+
+
+                  ),
 
 
 

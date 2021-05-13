@@ -8,18 +8,18 @@ class AddStudent{
 
   AddStudent();
 
-  Future addStudent(name, age, year) async {
+  Future<void> addStudent(name, age, year) async{
     if(name==""||age==""||year==""){
       print("no input");
     }else{
       return student
         .add({
-        'full_name': name,
-        'age': age,
-        'year': year
+          'full_name': name,
+          'age': age,
+          'year': year
+        })
             .then((value) => print("User Added"))
-            .catchError((error) => print("Failed to add user: $error"))
-      });
+            .catchError((error) => print("Failed to add user: $error"));
     }
 
   }

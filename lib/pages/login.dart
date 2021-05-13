@@ -152,7 +152,7 @@ class _LoginState extends State<Login> {
                         GridTextColumn(
                             columnName: 'name',
                             label:Container(
-                              padding: EdgeInsets.symmetric(horizontal: 16.0),
+                              padding: EdgeInsets.symmetric(horizontal: 30.0),
                               alignment: Alignment.centerRight,
                               child: Text('Name'),
                             ),
@@ -160,7 +160,7 @@ class _LoginState extends State<Login> {
                         GridTextColumn(
                           columnName: 'age',
                           label:Container(
-                            padding: EdgeInsets.symmetric(horizontal: 16.0),
+                            padding: EdgeInsets.symmetric(horizontal: 30.0),
                             alignment: Alignment.centerRight,
                             child: Text('Age'),
                           ),
@@ -168,7 +168,7 @@ class _LoginState extends State<Login> {
                         GridTextColumn(
                           columnName: 'year',
                           label:Container(
-                            padding: EdgeInsets.symmetric(horizontal: 16.0),
+                            padding: EdgeInsets.symmetric(horizontal: 15.0),
                             alignment: Alignment.centerRight,
                             child: Text('Gradution Year'),
                           ),

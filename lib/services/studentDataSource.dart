@@ -10,10 +10,8 @@ class StudentDataSource extends DataGridSource{
   GetStudent getStudents=GetStudent();
   List<Student> students=GetStudent.list;
   ListEquality equal=ListEquality();
-  Student student=Student('Jim','18','2021');
 
   StudentDataSource(){
-    students.add(student);
     dataGridRows = students
         .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
           DataGridCell<String>(columnName: 'name', value: dataGridRow.name),
